@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{752C02B6-B29E-4514-9F1E-454D18607027}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microshaoft.Net</RootNamespace>
+    <AssemblyName>Microshaoft.Net45</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\NET45\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET45</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="00.Utilities\BytesHelper.cs" />
+    <Compile Include="09.Socket\Udp.cs" />
+    <Compile Include="10.WindowsForm\TaskProcesserHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="11.XML\CDATA.cs" />
+    <Compile Include="00.Utilities\CompressHelper.cs" />
+    <Compile Include="00.Utilities\CryptographyHelper.cs" />
+    <Compile Include="00.Utilities\DateTimeHelper.cs" />
+    <Compile Include="10.ExpressionTree\DynamicCallMethodExpressionTreeInvokerHelper.cs" />
+    <Compile Include="10.ExpressionTree\DynamicPropertyAccessor.cs" />
+    <Compile Include="00.Utilities\EasyTimer.cs" />
+    <Compile Include="00.Utilities\EncodingHelper.cs" />
+    <Compile Include="00.Utilities\FileLogHelper.cs" />
+    <Compile Include="00.Utilities\GCNotifier.cs" />
+    <Compile Include="00.Utilities\PathFileHelper.cs" />
+    <Compile Include="00.Utilities\ReaderWriterLockSlimHelper.cs" />
+    <Compile Include="00.Utilities\RemotingHelper.cs" />
+    <Compile Include="00.Utilities\SequenceSeedHelper.cs" />
+    <Compile Include="00.Utilities\SerializerHelper.cs" />
+    <Compile Include="00.Utilities\StreamDataHelper.cs" />
+    <Compile Include="00.Utilities\TryCatchFinallyHelper.cs" />
+    <Compile Include="05.ConcurrentAsyncQueue\ConcurrentAsyncQueue.cs" />
+    <Compile Include="05.Json\JsonHelper.cs" />
+    <Compile Include="09.Socket\BufferManager.cs" />
+    <Compile Include="09.Socket\SocketAsyncDataHandler.cs" />
+    <Compile Include="09.Socket\SocketAsyncEventArgsPool.cs" />
+    <Compile Include="09.Socket\SocketHelper.cs" />
+    <Compile Include="10.Caches\CacheItemEntryRemovedNotifier.cs" />
+    <Compile Include="10.PerformanceCounter\CodeTimerPerformance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10.PerformanceCounter\Containers\CommonPerformanceCountersContainer.cs" />
+    <Compile Include="10.PerformanceCounter\Containers\IPerformanceCountersContainer.cs" />
+    <Compile Include="10.PerformanceCounter\Containers\MessagesPerformanceCountersContainer.cs" />
+    <Compile Include="10.PerformanceCounter\Containers\SessionsPerformanceCountersContainer.cs" />
+    <Compile Include="10.PerformanceCounter\EasyPerformanceCountersHelper.cs" />
+    <Compile Include="10.PerformanceCounter\PerformanceCounters.cs" />
+    <Compile Include="10.PerformanceCounter\PerformanceCountersHelper.cs" />
+    <Compile Include="11.XML\XmlValidationHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11.XML\XslCompiledTransformHelper.cs" />
+    <Compile Include="11.XML\XmlSerializersCache.cs" />
+    <Compile Include="12.ExtensionsMethods\ExtensionsMethodsManager.cs" />
+    <Compile Include="20.DataTable\DataTableHelper.cs" />
+    <Compile Include="20.DataTable\DataTableList.ExtensionMethodsManager.cs" />
+    <Compile Include="88.Console\ConsoleReadMaskLine.cs" />
+    <Compile Include="89.WindowsService\WindowsServiceHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="90.SharePoint\SharePoint.cs" />
+    <Compile Include="90.WorkFlow\WorkFlowHelper.cs" />
+    <Compile Include="98.Win32\Win32User32.cs" />
+    <Compile Include="99.Net35\ConcurrentQueue.Net35.cs" />
+    <Compile Include="99.Net35\Tuple.Net35.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
