@@ -1,4 +1,4 @@
-﻿namespace Microsoft.Boc
+﻿namespace Microshaoft
 {
     using System;
     using System.Collections.Generic;
