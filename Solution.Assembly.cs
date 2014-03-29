@@ -5,11 +5,20 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Microshaoft.Net")]
+#if NET35
+[assembly: AssemblyTitle("Microshaoft.Net for .NET 3.5")]
+#elif NET45
+[assembly: AssemblyTitle("Microshaoft.Net for .NET 4.5.1")]
+#endif
+
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microshaoft")]
-[assembly: AssemblyProduct("Microshaoft.Net")]
+#if NET35
+[assembly: AssemblyProduct("Microshaoft.Net for .NET 3.5")]
+#elif NET45
+[assembly: AssemblyProduct("Microshaoft.Net for .NET 4.5.1")]
+#endif
 [assembly: AssemblyCopyright("Copyright ©  2014 于溪玥")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

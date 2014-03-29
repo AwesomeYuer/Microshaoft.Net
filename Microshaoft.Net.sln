@@ -7,11 +7,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99.Test", "99.Test", "{99D1C089-56B5-4FA8-9AEC-9876B856870B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Microshaoft.Net", "00.Microshaoft.Net", "{C22704FC-3E73-402C-B1B4-5F50DD0A2101}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10.Microshaoft.Net", "10.Microshaoft.Net", "{C22704FC-3E73-402C-B1B4-5F50DD0A2101}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microshaoft.Net45+", "Microshaoft.Net\Microshaoft.Net45+.csproj", "{752C02B6-B29E-4514-9F1E-454D18607027}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microshaoft.Net35", "Microshaoft.Net\Microshaoft.Net35.csproj", "{64451A1B-46E4-4178-9750-33C3813EBE05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Solution.Projects.AssemblyInfo.cs", "00.Solution.Projects.AssemblyInfo.cs", "{70AB818D-6C1A-4AAD-A6E2-6CCF3C42B34C}"
+	ProjectSection(SolutionItems) = preProject
+		Solution.Assembly.cs = Solution.Assembly.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Nuget.Packages", "00.Nuget.Packages", "{DFE8455B-818A-49DA-A830-F54DC8E8068E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packages", "Packages\Packages.csproj", "{FB06D25D-DBD0-4BE4-9056-905536D38589}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +40,10 @@ Global
 		{64451A1B-46E4-4178-9750-33C3813EBE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64451A1B-46E4-4178-9750-33C3813EBE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64451A1B-46E4-4178-9750-33C3813EBE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB06D25D-DBD0-4BE4-9056-905536D38589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB06D25D-DBD0-4BE4-9056-905536D38589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB06D25D-DBD0-4BE4-9056-905536D38589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB06D25D-DBD0-4BE4-9056-905536D38589}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +52,6 @@ Global
 		{A7907473-6D23-46DB-987A-58157D13A7DA} = {99D1C089-56B5-4FA8-9AEC-9876B856870B}
 		{752C02B6-B29E-4514-9F1E-454D18607027} = {C22704FC-3E73-402C-B1B4-5F50DD0A2101}
 		{64451A1B-46E4-4178-9750-33C3813EBE05} = {C22704FC-3E73-402C-B1B4-5F50DD0A2101}
+		{FB06D25D-DBD0-4BE4-9056-905536D38589} = {DFE8455B-818A-49DA-A830-F54DC8E8068E}
 	EndGlobalSection
 EndGlobal
