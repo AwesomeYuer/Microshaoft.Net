@@ -74,9 +74,11 @@
     <Compile Include="06.MEF\MEF.Contracts.cs" />
     <Compile Include="06.MEF\MEFHelper.cs" />
     <Compile Include="09.Socket\BufferManager.cs" />
+    <Compile Include="09.Socket\Microsoft.System.ServiceModel.Channels.SocketAsyncEventArgsPool.cs" />
     <Compile Include="09.Socket\SocketAsyncDataHandler.cs" />
     <Compile Include="09.Socket\SocketAsyncEventArgsPool.cs" />
     <Compile Include="09.Socket\SocketHelper.cs" />
+    <Compile Include="09.Socket\Udp.cs" />
     <Compile Include="10.Caches\CacheItemEntryRemovedNotifier.cs" />
     <Compile Include="10.ExpressionTree\DynamicCallMethodExpressionTreeInvokerHelper.cs" />
     <Compile Include="10.ExpressionTree\DynamicPropertyAccessor.cs" />

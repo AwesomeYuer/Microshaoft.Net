@@ -64,6 +64,7 @@
     <Compile Include="00.Utilities\StringHelper.cs" />
     <Compile Include="06.MEF\MEF.Contracts.cs" />
     <Compile Include="06.MEF\MEFHelper.cs" />
+    <Compile Include="09.Socket\Microsoft.System.ServiceModel.Channels.SocketAsyncEventArgsPool.cs" />
     <Compile Include="09.Socket\Udp.cs" />
     <Compile Include="10.WindowsForm\TaskProcesserHelper.cs">
       <SubType>Form</SubType>

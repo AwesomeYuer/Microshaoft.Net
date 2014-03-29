@@ -1,4 +1,5 @@
-﻿namespace Test
+﻿#if NET45
+namespace Test
 {
     using Microshaoft;
     using System;
@@ -7,6 +8,7 @@
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
+
     class Program
     {
         static BufferManager _bufferManager;
@@ -235,11 +237,12 @@
 
 namespace TestConsoleApplication
 {
+    using Microshaoft;
     using System;
     using System.Diagnostics;
-    using System.Threading;
+#if NET45
     using System.Threading.Tasks;
-    using Microshaoft;
+#endif
     class Program
     {
         static void Main1(string[] args)
@@ -571,7 +574,7 @@ namespace Microshaoft
 }
 //=========================================================================================
 //=========================================================================================
-
+#endif
 
 
 
