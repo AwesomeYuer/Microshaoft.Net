@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microshaoft.Net45+", "Micro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microshaoft.Net35", "Microshaoft.Net\Microshaoft.Net35.csproj", "{64451A1B-46E4-4178-9750-33C3813EBE05}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Solution.Projects.Common.AssemblyInfo.cs", "00.Solution.Projects.Common.AssemblyInfo.cs", "{70AB818D-6C1A-4AAD-A6E2-6CCF3C42B34C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Solution.Projects.Common.AssemblyInfo.cs", "01.Solution.Projects.Common.AssemblyInfo.cs", "{70AB818D-6C1A-4AAD-A6E2-6CCF3C42B34C}"
 	ProjectSection(SolutionItems) = preProject
 		Projects.Common.AssemblyInfo.cs = Projects.Common.AssemblyInfo.cs
 	EndProjectSection
