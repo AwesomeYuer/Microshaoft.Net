@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 #elif NET45
 [assembly: AssemblyProduct("Microshaoft.Net for .NET 4.5.1")]
 #endif
-[assembly: AssemblyCopyright("Copyright ©  2014 于溪玥")]
+[assembly: AssemblyCopyright("Copyright © 于溪玥 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
