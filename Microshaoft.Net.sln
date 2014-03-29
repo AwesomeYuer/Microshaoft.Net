@@ -13,14 +13,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microshaoft.Net45+", "Micro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microshaoft.Net35", "Microshaoft.Net\Microshaoft.Net35.csproj", "{64451A1B-46E4-4178-9750-33C3813EBE05}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Solution.Projects.AssemblyInfo.cs", "00.Solution.Projects.AssemblyInfo.cs", "{70AB818D-6C1A-4AAD-A6E2-6CCF3C42B34C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Solution.Projects.Common.AssemblyInfo.cs", "00.Solution.Projects.Common.AssemblyInfo.cs", "{70AB818D-6C1A-4AAD-A6E2-6CCF3C42B34C}"
 	ProjectSection(SolutionItems) = preProject
-		Solution.Assembly.cs = Solution.Assembly.cs
+		Projects.Common.AssemblyInfo.cs = Projects.Common.AssemblyInfo.cs
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Nuget.Packages", "00.Nuget.Packages", "{DFE8455B-818A-49DA-A830-F54DC8E8068E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packages", "Packages\Packages.csproj", "{FB06D25D-DBD0-4BE4-9056-905536D38589}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Solution.Items", "00.Solution.Items", "{E571B7D6-6D5A-42F4-AEE8-B578A29F3D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,5 +55,7 @@ Global
 		{752C02B6-B29E-4514-9F1E-454D18607027} = {C22704FC-3E73-402C-B1B4-5F50DD0A2101}
 		{64451A1B-46E4-4178-9750-33C3813EBE05} = {C22704FC-3E73-402C-B1B4-5F50DD0A2101}
 		{FB06D25D-DBD0-4BE4-9056-905536D38589} = {DFE8455B-818A-49DA-A830-F54DC8E8068E}
+		{DFE8455B-818A-49DA-A830-F54DC8E8068E} = {E571B7D6-6D5A-42F4-AEE8-B578A29F3D5C}
+		{70AB818D-6C1A-4AAD-A6E2-6CCF3C42B34C} = {E571B7D6-6D5A-42F4-AEE8-B578A29F3D5C}
 	EndGlobalSection
 EndGlobal

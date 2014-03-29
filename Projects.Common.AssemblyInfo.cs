@@ -14,12 +14,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microshaoft")]
-#if NET35
-[assembly: AssemblyProduct("Microshaoft.Net for .NET 3.5")]
-#elif NET45
-[assembly: AssemblyProduct("Microshaoft.Net for .NET 4.5.1")]
-#endif
-[assembly: AssemblyCopyright("Copyright © 于溪玥 2014")]
+
+[assembly: AssemblyCopyright("Copyright © 于溪玥 0000 ~ 9999")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

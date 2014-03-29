@@ -54,8 +54,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Solution.Assembly.cs">
-      <Link>Properties\Solution.Assembly.cs</Link>
+    <Compile Include="..\Projects.Common.AssemblyInfo.cs">
+      <Link>Properties\Projects.Common.AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="00.Utilities\BytesHelper.cs" />
     <Compile Include="00.Utilities\CryptographyHelper.cs" />
@@ -124,7 +124,7 @@
     <Compile Include="99.Net35\ConcurrentDictionary.Net35.cs" />
     <Compile Include="99.Net35\ConcurrentQueue.Net35.cs" />
     <Compile Include="99.Net35\Tuple.Net35.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
