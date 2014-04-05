@@ -208,7 +208,7 @@ namespace Microshaoft
             JToken jToken = jObject.SelectToken(jTokenPath);
             using (var jsonReader = jToken.CreateReader())
             {
-                Console.WriteLine(Environment.StackTrace);
+                //Console.WriteLine(Environment.StackTrace);
                 return jsonSerializer.Deserialize<T>(jsonReader);
             }
         }
@@ -251,6 +251,7 @@ namespace Microshaoft
                             {
                                 if (onReadedOncePathStringValueProcesssFunc != null)
                                 {
+
                                     var s = jsonReader.ReadAsString();
                                     breakAndReturn = onReadedOncePathStringValueProcesssFunc
                                             (
