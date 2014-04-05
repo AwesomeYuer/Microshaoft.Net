@@ -51,10 +51,10 @@
                 return (_socket == null);
             }
         }
-        public SocketAsyncDataHandler()
-        {
+        //public SocketAsyncDataHandler()
+        //{
 
-        }
+        //}
         public SocketAsyncDataHandler
                             (
                                 Socket socket
@@ -456,7 +456,7 @@
                   , IPEndPoint remoteIPEndPoint
                   , bool isWaitResponse
                   , WriteableTuple<bool, AutoResetEvent, DateTime, TToken> autoResetEventWaiter
-            //, TToken token
+                  //, TToken token
                   , out int sendTimes
                   , out long elapsedMilliseconds
                   , Stopwatch stopWatch = null
