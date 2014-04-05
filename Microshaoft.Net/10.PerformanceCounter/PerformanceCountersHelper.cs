@@ -2,7 +2,10 @@
 {
     using System;
     using System.Diagnostics;
+    using System.Threading;
     using System.Linq;
+
+
     public static class PerformanceCountersHelper
     {
 
@@ -58,7 +61,7 @@
                                     }
                                 );
                     }
-//#if NET45
+
                     if (timerCounters != null)
                     {
                         Array.ForEach
@@ -77,7 +80,7 @@
                             }
                         );
                     }
-//#endif
+
                     #endregion
                 }
                 var needTry = true;

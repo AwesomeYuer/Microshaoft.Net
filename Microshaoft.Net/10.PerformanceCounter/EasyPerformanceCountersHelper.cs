@@ -8,6 +8,7 @@
                                         where TPerformanceCountersContainer : class
                                                 , IPerformanceCountersContainer, new()
     {
+        private static QueuedObjectsPool<Stopwatch> _stopwatchsPool = new QueuedObjectsPool<Stopwatch>(0);
         private static Dictionary<string, TPerformanceCountersContainer> _dictionary
                         = new Dictionary<string, TPerformanceCountersContainer>();
         public static void AttachPerformanceCountersCategoryInstance
@@ -110,7 +111,9 @@
                                             );
                 if (enableProcessedAverageTimerCounter)
                 {
-                    r = Stopwatch.StartNew();
+                    r = _stopwatchsPool.Get(); //Stopwatch.StartNew();
+                    r.Reset();
+                    r.Start();
                 }
             }
             return r;
@@ -149,8 +152,13 @@
                 {
                     PerformanceCounter performanceCounter = container.ProcessedAverageTimerPerformanceCounter;
                     PerformanceCounter basePerformanceCounter = container.ProcessedAverageBasePerformanceCounter;
-                    stopwatch.Stop();
+
                     performanceCounter.IncrementBy(stopwatch.ElapsedTicks);
+                    if (stopwatch.IsRunning)
+                    {
+                        stopwatch.Stop();
+                        _stopwatchsPool.Put(stopwatch);
+                    }
                     basePerformanceCounter.Increment();
                     //stopwatch = null;
                 }
@@ -266,12 +274,15 @@
                                                     != MultiPerformanceCountersTypeFlags.None
                                                 );
                     var reThrowException = false;
+                    var stopwatch = _stopwatchsPool.Get();
+                    stopwatch.Reset();
                     container
                         .ProcessedAverageTimerPerformanceCounter
                             .ChangeAverageTimerCounterValueWithTryCatchExceptionFinally
                                         (
                                             enableProcessedAverageTimerCounter
                                             , container.ProcessedAverageBasePerformanceCounter
+                                            , stopwatch
                                             , () =>
                                             {
                                                 if (onCountPerformanceInnerProcessAction != null)
@@ -333,7 +344,10 @@
                                                 }
                                             }
                                         );
+                    stopwatch.Reset();
+                    _stopwatchsPool.Put(stopwatch);
                 }
+
             }
             else
             {
@@ -345,4 +359,3 @@
         }
     }
 }
-

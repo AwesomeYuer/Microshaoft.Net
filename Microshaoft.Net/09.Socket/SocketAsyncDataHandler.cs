@@ -47,13 +47,13 @@
         public bool HasNoWorkingSocket
         {
             get
-            { 
+            {
                 return (_socket == null);
             }
         }
         public SocketAsyncDataHandler()
         {
-            
+
         }
         public SocketAsyncDataHandler
                             (
@@ -450,44 +450,106 @@
             }
             return r;
         }
-        public bool SendDataToRemoteSyncWaitResponseWithRetry
+        public bool SendDataToSyncWaitResponseWithRetry<TToken>
               (
                   byte[] data
                   , IPEndPoint remoteIPEndPoint
                   , bool isWaitResponse
-                  , WaitHandle waitHandle
-                  , out int tryTimes
+                  , WriteableTuple<bool, AutoResetEvent, DateTime, TToken> autoResetEventWaiter
+            //, TToken token
+                  , out int sendTimes
                   , out long elapsedMilliseconds
-                  , int tryMaxTimes = 10
-                  , int waitOneMillisecondsTimeout = 10
+                  , Stopwatch stopWatch = null
+                  , Func<int, TToken, byte[]> onBeforeSendOnceProcessFunc = null
+                  , Action<int> onAfterSendedOnceProcessAction = null
+                  , int sendMaxTimes = 100
+                  , int resendWaitOneIntervalsInMillisecondsFactor = 1
+                  , int waitOneIntervalsInMilliseconds = 1000
               )
         {
             var r = false;
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            int i = 1;
-            while (i <= tryMaxTimes)
+            elapsedMilliseconds = -1;
+            if (stopWatch != null)
             {
-                //lock (_sendSyncLockObject)
+                if (!stopWatch.IsRunning)
                 {
-                    SendDataToSync(data, remoteIPEndPoint);
+                    stopWatch.Start();
                 }
-                if (!isWaitResponse)
-                {
-                    break;
-                }
-                bool b = waitHandle.WaitOne(waitOneMillisecondsTimeout * i);
-                if (b)
-                {
-                    // 有信号
-                    r = true;
-                    break;
-                }
-                i++;
             }
-            stopWatch.Stop();
-            tryTimes = i;
-            elapsedMilliseconds = stopWatch.ElapsedMilliseconds;
+            AutoResetEvent autoResetEvent = autoResetEventWaiter.Item2;
+            int i = 0;
+            var nextWaitOneIntervalsInMilliseconds = waitOneIntervalsInMilliseconds;
+            try
+            {
+
+                while (i < sendMaxTimes)
+                {
+
+                    if (onBeforeSendOnceProcessFunc != null)
+                    {
+                        data = onBeforeSendOnceProcessFunc(i, autoResetEventWaiter.Item4);
+                    }
+                    SendDataToSync
+                        (
+                            data
+                            , remoteIPEndPoint
+                        );
+                    i++;
+                    if (onAfterSendedOnceProcessAction != null)
+                    {
+                        onAfterSendedOnceProcessAction(i);
+                    }
+                    if (!isWaitResponse)
+                    {
+                        break;
+                    }
+                    if (autoResetEvent != null)
+                    {
+                        if (autoResetEventWaiter.Item1)
+                        {
+
+                            bool b = autoResetEvent.WaitOne(nextWaitOneIntervalsInMilliseconds, true);
+                            if (b)
+                            {
+                                // 有信号
+                                r = true;
+                                break;
+                            }
+                            nextWaitOneIntervalsInMilliseconds += (waitOneIntervalsInMilliseconds * resendWaitOneIntervalsInMillisecondsFactor);
+                        }
+                        else
+                        {
+                            r = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                if (stopWatch != null)
+                {
+                    if (stopWatch.IsRunning)
+                    {
+                        stopWatch.Stop();
+                        elapsedMilliseconds = stopWatch.ElapsedMilliseconds;
+                    }
+                }
+                if (autoResetEvent != null)
+                {
+                    autoResetEvent.Close();
+#if NET45
+                    autoResetEvent.Dispose();
+#endif
+                    autoResetEvent = null;
+                    autoResetEventWaiter = null;
+                }
+                sendTimes = i;
+            }
             return r;
         }
         public int SendDataSyncWithRetry
@@ -534,17 +596,33 @@
                         (
                             byte[] data
                             , EndPoint remoteEndPoint
-                            , int sleepMilliseconds = 10
+            //, Action onBeforeSendProcessAction = null
+            //, Action onAfterSendedProcessAction = null
+                            , int sleepMilliseconds = 100
                         )
         {
             var r = -1;
             if (_isUdp)
             {
-                lock (_sendStaticSyncLockObject)
+                //if (onBeforeSendProcessAction != null)
+                //{
+                //    onBeforeSendProcessAction();
+                //}
+                //lock (_sendStaticSyncLockObject)
                 {
+
                     r = _socket.SendTo(data, remoteEndPoint);
-                    //Thread.Sleep(sleepMilliseconds);
                 }
+                if (sleepMilliseconds > 0)
+                {
+                    Thread.Sleep(sleepMilliseconds);
+                }
+
+                //if (onAfterSendedProcessAction != null)
+                //{
+                //    onAfterSendedProcessAction();
+                //}
+
             }
             return r;
         }

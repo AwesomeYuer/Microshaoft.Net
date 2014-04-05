@@ -69,6 +69,8 @@
     <Compile Include="06.MEF\MEFHelper.cs" />
     <Compile Include="09.Socket\Microsoft.System.ServiceModel.Channels.SocketAsyncEventArgsPool.cs" />
     <Compile Include="09.Socket\Udp.cs" />
+    <Compile Include="10.Pools\00.PoolManager\PoolManager.cs" />
+    <Compile Include="10.Pools\QueuedObjectsPool.cs" />
     <Compile Include="10.WindowsForm\TaskProcesserHelper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +133,7 @@
     <Compile Include="98.Win32\Win32User32.cs" />
     <Compile Include="99.Net35\ConcurrentQueue.Net35.cs" />
     <Compile Include="99.Net35\Tuple.Net35.cs" />
+    <Compile Include="99.Net35\WriteableTuple.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

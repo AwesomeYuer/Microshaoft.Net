@@ -14,8 +14,8 @@ namespace System
             return new Tuple<T1, T2, T3, T4>(item1, item2, item3, item4);
         }
     }
-    
-    
+
+
     public class Tuple<T1, T2>
     {
         public Tuple(T1 item1, T2 item2)
@@ -23,7 +23,7 @@ namespace System
             Item1 = item1;
             Item2 = item2;
         }
-        
+
         public T1 Item1;
         public T2 Item2;
         //public 
@@ -47,7 +47,7 @@ namespace System
         //public 
     }
 
-   
+
 
 }
 #endif
