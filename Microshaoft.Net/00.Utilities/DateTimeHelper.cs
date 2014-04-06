@@ -5,8 +5,8 @@
     using System.Globalization;
     public static class DateTimeHelper
     {
-#if NET45
-//#endif
+//#if NET45
+        //#endif
         public static void GetAlignSecondsDateTimes<T>
                                 (
                                     DateTime time
@@ -24,18 +24,27 @@
                 }
             }
         }
-//#if NET45
-#endif
+        //#if NET45
+//#endif
         public static bool IsVaildateTimestamp(DateTime timeStamp, int timeoutSeconds)
         {
             long l = SecondsDiffNow(timeStamp);
             return ((l > 0) && (l < timeoutSeconds));
         }
+
+        public static long MillisecondsDiff(DateTime time1, DateTime time2)
+        {
+            long t1 = time1.Ticks;
+            long t2 = time2.Ticks;
+            return (t2 - t1) / 10000;
+        }
+        public static long SecondsDiff(DateTime time1, DateTime time2)
+        {
+            return MillisecondsDiff(time1, time2) / 1000;
+        }
         public static long MillisecondsDiffNow(DateTime time)
         {
-            long now = DateTime.Now.Ticks;
-            long t = time.Ticks;
-            return (t - now) / 10000;
+            return MillisecondsDiff(time, DateTime.Now);
         }
         public static long SecondsDiffNow(DateTime time)
         {
@@ -66,6 +75,6 @@
             return r;
         }
 
-       
+
     }
 }
