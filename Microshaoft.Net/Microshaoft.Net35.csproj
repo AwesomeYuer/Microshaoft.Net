@@ -117,6 +117,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="90.SharePoint\SharePoint.cs" />
+    <Compile Include="90.Type\TypeHelper.cs" />
     <Compile Include="90.WorkFlow\WorkFlowHelper.cs" />
     <Compile Include="97.Soap\GZipSoapExtension.cs">
       <SubType>Component</SubType>

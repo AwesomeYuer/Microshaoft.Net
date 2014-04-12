@@ -75,7 +75,12 @@
                                         && x.Item2 != null
                                     )
                                 {
+#if NET45
+                                    x.Item2.Restart();
+#elif NET35
+                                    x.Item2.Reset();
                                     x.Item2.Start();
+#endif
                                 }
                             }
                         );
@@ -121,7 +126,8 @@
                                                     long elapsedTicks = stopwatch.ElapsedTicks;
                                                     var counter = xx.Item3;
                                                     counter.IncrementBy(elapsedTicks);
-                                                    stopwatch = null;
+                                                    //池化
+                                                    //stopwatch = null;
                                                     counter = xx.Item4;  //base
                                                     counter.Increment();
                                                 }

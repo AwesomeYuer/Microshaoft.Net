@@ -454,9 +454,10 @@
               (
                   byte[] data
                   , IPEndPoint remoteIPEndPoint
-                  , bool isWaitResponse
-                  , WriteableTuple<bool, AutoResetEvent, DateTime, TToken> autoResetEventWaiter
-                  //, TToken token
+                  , bool blockForResponse
+                  , AutoResetEvent waiter
+                  , TToken token
+                  , Func<TToken, Tuple<bool, bool>> onSetAutoResetEventProcessFunc
                   , out int sendTimes
                   , out long elapsedMilliseconds
                   , Stopwatch stopWatch = null
@@ -465,10 +466,11 @@
                   , int sendMaxTimes = 100
                   , int resendWaitOneIntervalsInMillisecondsFactor = 1
                   , int waitOneIntervalsInMilliseconds = 1000
+
               )
         {
             var r = false;
-            elapsedMilliseconds = -1;
+            elapsedMilliseconds = 0;
             if (stopWatch != null)
             {
                 if (!stopWatch.IsRunning)
@@ -476,18 +478,23 @@
                     stopWatch.Start();
                 }
             }
-            AutoResetEvent autoResetEvent = autoResetEventWaiter.Item2;
+            AutoResetEvent autoResetEvent = waiter;
             int i = 0;
             var nextWaitOneIntervalsInMilliseconds = waitOneIntervalsInMilliseconds;
             try
             {
-
-                while (i < sendMaxTimes)
+                var continueWaiting = true;
+                while
+                    (
+                        i < sendMaxTimes
+                        && continueWaiting
+                        && !r
+                    )
                 {
-
+                    #region loop body
                     if (onBeforeSendOnceProcessFunc != null)
                     {
-                        data = onBeforeSendOnceProcessFunc(i, autoResetEventWaiter.Item4);
+                        data = onBeforeSendOnceProcessFunc(i, token);
                     }
                     SendDataToSync
                         (
@@ -499,15 +506,17 @@
                     {
                         onAfterSendedOnceProcessAction(i);
                     }
-                    if (!isWaitResponse)
+                    if (!blockForResponse)
                     {
                         break;
                     }
+                    Tuple<bool, bool> tuple = null;
                     if (autoResetEvent != null)
                     {
-                        if (autoResetEventWaiter.Item1)
+                        tuple = onSetAutoResetEventProcessFunc(token);
+                        if (tuple.Item1)                 //是否继续等待
                         {
-
+                            //继续等待
                             bool b = autoResetEvent.WaitOne(nextWaitOneIntervalsInMilliseconds, true);
                             if (b)
                             {
@@ -519,10 +528,17 @@
                         }
                         else
                         {
-                            r = true;
+                            //不继续等待
+                            continueWaiting = false;
+                            if (!r)
+                            {
+                                r = tuple.Item2;       //可能的送达结果=false 或未知 因为不继续等待了
+                            }
                             break;
                         }
+
                     }
+                    #endregion
                 }
             }
             catch (Exception e)
@@ -531,22 +547,25 @@
             }
             finally
             {
-                if (stopWatch != null)
+                if (blockForResponse)
                 {
-                    if (stopWatch.IsRunning)
+                    if (stopWatch != null)
                     {
-                        stopWatch.Stop();
+                        if (stopWatch.IsRunning)
+                        {
+                            stopWatch.Stop();
+                        }
                         elapsedMilliseconds = stopWatch.ElapsedMilliseconds;
                     }
-                }
-                if (autoResetEvent != null)
-                {
-                    autoResetEvent.Close();
+                    if (autoResetEvent != null)
+                    {
+                        autoResetEvent.Close();
 #if NET45
-                    autoResetEvent.Dispose();
+                        autoResetEvent.Dispose();
 #endif
-                    autoResetEvent = null;
-                    autoResetEventWaiter = null;
+                        autoResetEvent = null;
+                        //autoResetEventWaiter = null;
+                    }
                 }
                 sendTimes = i;
             }
@@ -598,7 +617,7 @@
                             , EndPoint remoteEndPoint
             //, Action onBeforeSendProcessAction = null
             //, Action onAfterSendedProcessAction = null
-                            , int sleepMilliseconds = 100
+                            , int sleepMilliseconds = 0
                         )
         {
             var r = -1;

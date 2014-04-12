@@ -5,8 +5,17 @@
     using System.Collections.Concurrent;
     using System.Diagnostics;
     using System.Threading;
+
+    internal static class QueuedObjectsPoolManager
+    {
+        public static readonly QueuedObjectsPool<Stopwatch> StopwatchPool = new QueuedObjectsPool<Stopwatch>(0);
+
+    }
+
+
     public class ConcurrentAsyncQueue<T>
     {
+
         public delegate void QueueEventHandler(T item);
         public event QueueEventHandler OnDequeue;
         public delegate void QueueLogEventHandler(string logMessage);
@@ -18,6 +27,12 @@
         public event ExceptionEventHandler OnCaughtException;
         private ConcurrentQueue<Tuple<Stopwatch, T>> _queue =
                                     new ConcurrentQueue<Tuple<Stopwatch, T>>();
+
+        public ConcurrentQueue<Tuple<Stopwatch, T>> InternalQueue
+        {
+            get { return _queue; }
+            //set { _queue = value; }
+        }
         private ConcurrentQueue<Action> _callbackProcessBreaksActions;
         private long _concurrentDequeueThreadsCount = 0; //Microshaoft 用于控制并发线程数
         private ConcurrentQueue<ThreadProcessor> _dequeueThreadsProcessorsPool;
@@ -75,7 +90,7 @@
                 Interlocked.Increment(ref Sender._concurrentDequeueThreadsCount);
                 bool counterEnabled = Sender._isAttachedPerformanceCounters;
                 QueuePerformanceCountersContainer qpcc = Sender.PerformanceCounters;
-                var queue = Sender._queue;
+                var queue = Sender.InternalQueue;
                 var reThrowException = false;
                 PerformanceCountersHelper
                     .TryCountPerformance
@@ -91,11 +106,11 @@
 											.DequeueThreadsCountPerformanceCounter
 									}
                             , //DecrementCountersBeforeCountPerformance:
-                                null
+                              null
                             , null
                             , () =>
                             {
-#region Try Process
+                                #region Try Process
                                 if (Sender.OnDequeueThreadStart != null)
                                 {
                                     l = Interlocked.Read(ref Sender._concurrentDequeueThreadsCount);
@@ -116,21 +131,23 @@
                                 }
                                 while (true)
                                 {
-#region while true loop
+                                    #region while true loop
                                     if (Break)
                                     {
                                         break;
                                     }
                                     while (!queue.IsEmpty)
                                     {
-#region while queue.IsEmpty loop
+                                        #region while queue.IsEmpty loop
                                         if (Break)
                                         {
                                             break;
                                         }
                                         Tuple<Stopwatch, T> item = null;
+
                                         if (queue.TryDequeue(out item))
                                         {
+                                            var stopwatch = QueuedObjectsPoolManager.StopwatchPool.Get();
                                             PerformanceCountersHelper
                                                 .TryCountPerformance
                                                     (
@@ -180,7 +197,7 @@
 																			>
 																		(
 																			true
-																			, new Stopwatch()
+																			, stopwatch
 																			, qpcc
 																				.DequeueProcessedAverageTimerPerformanceCounter
 																			, qpcc
@@ -211,10 +228,13 @@
 																		.DequeueProcessedRateOfCountsPerSecondPerformanceCounter
 																}
                                                     );
+                                            //池化
+                                            stopwatch.Reset();
+                                            QueuedObjectsPoolManager.StopwatchPool.Put(stopwatch);
                                         }
                                         #endregion while queue.IsEmpty loop
                                     }
-#region wait
+                                    #region wait
                                     Sender._dequeueThreadsProcessorsPool.Enqueue(this);
                                     if (Break)
                                     {
@@ -229,7 +249,7 @@
                             }
                             , (x) =>			//catch
                             {
-#region Catch Process
+                                #region Catch Process
                                 if (Sender.OnCaughtException != null)
                                 {
                                     reThrowException = Sender.OnCaughtException(Sender, x);
@@ -239,7 +259,7 @@
                             }
                             , (x, y) =>		//finally
                             {
-#region Finally Process
+                                #region Finally Process
                                 l = Interlocked.Decrement(ref Sender._concurrentDequeueThreadsCount);
                                 if (l < 0)
                                 {
@@ -255,7 +275,7 @@
                                                             "{0} Threads Count {1},Queue Count {2},Current Thread: {3} at {4}"
                                                             , "Threads--"
                                                             , l
-                                                            , Sender._queue.Count
+                                                            , Sender.InternalQueue.Count
                                                             , Thread.CurrentThread.Name
                                                             , DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fffff")
                                                         )
@@ -413,6 +433,7 @@
                             Stopwatch stopwatch = null;
                             if (_isAttachedPerformanceCounters)
                             {
+                                stopwatch = QueuedObjectsPoolManager.StopwatchPool.Get();
                                 stopwatch = Stopwatch.StartNew();
                             }
                             var element = Tuple.Create<Stopwatch, T>(stopwatch, item);
@@ -455,7 +476,7 @@ namespace Microshaoft
     using System.Diagnostics;
     public class QueuePerformanceCountersContainer //: IPerformanceCountersContainer
     {
-#region PerformanceCounters
+        #region PerformanceCounters
         private PerformanceCounter _caughtExceptionsPerformanceCounter;
         [
             PerformanceCounterDefinitionAttribute
@@ -780,12 +801,3 @@ namespace Microshaoft
         }
     }
 }
-
-
-
-
-
-
-
-
-

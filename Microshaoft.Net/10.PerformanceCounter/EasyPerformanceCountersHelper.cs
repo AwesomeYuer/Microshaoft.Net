@@ -154,11 +154,8 @@
                     PerformanceCounter basePerformanceCounter = container.ProcessedAverageBasePerformanceCounter;
 
                     performanceCounter.IncrementBy(stopwatch.ElapsedTicks);
-                    if (stopwatch.IsRunning)
-                    {
-                        stopwatch.Stop();
-                        _stopwatchsPool.Put(stopwatch);
-                    }
+                    stopwatch.Reset();
+                    _stopwatchsPool.Put(stopwatch);
                     basePerformanceCounter.Increment();
                     //stopwatch = null;
                 }
@@ -275,7 +272,7 @@
                                                 );
                     var reThrowException = false;
                     var stopwatch = _stopwatchsPool.Get();
-                    stopwatch.Reset();
+                    //stopwatch.Reset();
                     container
                         .ProcessedAverageTimerPerformanceCounter
                             .ChangeAverageTimerCounterValueWithTryCatchExceptionFinally
@@ -359,3 +356,4 @@
         }
     }
 }
+

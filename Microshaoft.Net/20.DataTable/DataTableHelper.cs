@@ -1,165 +1,10 @@
-﻿namespace ConsoleApplication
+﻿namespace Microshaoft
 {
     using System;
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
-    using System.Text;
-    using System.Xml.Serialization;
-    using Microshaoft;
-    public class Class111
-    {
-        //[STAThread]
-        [Serializable]
-        public class Entry
-        {
-            [XmlElement("F1")]
-            public string F1 { get; set; }
-            [XmlElement("F2")]
-            public int F2 { get; set; }
-            [XmlAttribute("F3")]
-            public DateTime F3 { get; set; }
-            public DateTime? FF3 { get; set; }
-            [XmlArrayItem("Entry2", typeof(Entry2))]
-            [XmlArray("Entry2S")]
-            public Entry2[] Entry2S { get; set; }
-        };
-        public class Entry2
-        {
-            [XmlElement("F1")]
-            public string F1 { get; set; }
-            [XmlElement("F2")]
-            public int F2 { get; set; }
-            [XmlAttribute("F3")]
-            public DateTime F3 { get; set; }
-            public DateTime? FF3 { get; set; }
-        };
-        static void Main(string[] args)
-        {
-            var list = new List<Entry>()
-							{
-								new Entry() 
-									{
-										F1 = "a"
-										, F2= 1
-										, F3 = DateTime.Now
-										, FF3 = null
-										, Entry2S = new []
-														{
-															new Entry2 ()
-															{
-																F1 = "sadasd"
-																, F2 = 10
-																, F3 = DateTime.Now
-															}
-															, new Entry2 ()
-															{
-																F1 = "sadasd"
-																, F2 = 10
-																, F3 = DateTime.Now
-															}
-															, new Entry2 ()
-															{
-																F1 = "sadasd"
-																, F2 = 10
-																, F3 = DateTime.Now
-															}
-														}
-									}
-								,new Entry() 
-									{
-										F1= "b"
-										, F2= 2
-										, F3 = DateTime.Now
-										, FF3 = null
-										, Entry2S = new []
-													{
-														new Entry2 ()
-														{
-															F1 = "sadasd"
-															, F2 = 10
-															, F3 = DateTime.Now
-														}
-														, new Entry2 ()
-														{
-															F1 = "sadasd"
-															, F2 = 10
-															, F3 = DateTime.Now
-														}
-														, new Entry2 ()
-														{
-															F1 = "sadasd"
-															, F2 = 10
-															, F3 = DateTime.Now
-														}
-													}
-									}
-								,new Entry() 
-									{
-										F1= "c"
-										, F2= 3
-										, F3 = DateTime.Now
-										, FF3 = null
-										, Entry2S = new []
-													{
-														new Entry2 ()
-														{
-															F1 = "sadasd"
-															, F2 = 10
-															, F3 = DateTime.Now
-														}
-														, new Entry2 ()
-														{
-															F1 = "sadasd"
-															, F2 = 10
-															, F3 = DateTime.Now
-														}
-														, new Entry2 ()
-														{
-															F1 = "sadasd"
-															, F2 = 10
-															, F3 = DateTime.Now
-														}
-													}
-									}
-							};
-            var dataTable = list.ToDataTable<Entry>();
-            DataTableHelper.DataTableRowsForEach
-                                (
-                                    dataTable
-                                    , (x, y) =>
-                                    {
-                                        Console.WriteLine("{1}{0}{2}", " : ", y, x.ColumnName);
-                                        return false;
-                                    }
-                                    , (x) =>
-                                    {
-                                        Console.WriteLine("{1}", " : ", x.Count);
-                                        return false;
-                                    }
-                                    , (x, y, z, w) =>
-                                    {
-                                        Console.WriteLine("{1}{0}{2}{0}{3}{0}{4}", " : ", x.ColumnName, y, z, w);
-                                        return false;
-                                    }
-                                    , (x, y, z) =>
-                                    {
-                                        Console.WriteLine("{1}{0}{2}", " : ", x.Count, z);
-                                        return false;
-                                    }
-                                );
-            dataTable = DataTableHelper.GenerateEmptyDataTable<Entry>();
-            Console.ReadLine();
-        }
-    }
-}
-namespace Microshaoft
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-    using System.Text;
+
     public static class DataTableHelper
     {
         private static List<Type> _typesWhiteList = new List<Type>()
@@ -177,23 +22,56 @@ namespace Microshaoft
             var type = typeof(T);
             return GenerateEmptyDataTable(type);
         }
-        public static DataTable GenerateEmptyDataTable(Type type)
+
+        public static DataTable GenerateEmptyDataTable
+                (
+                    Type type
+
+                )
         {
-            var properties = type.GetProperties().Where
-                                                    (
-                                                        (x) =>
-                                                        {
-                                                            return
-                                                                _typesWhiteList.Any
-                                                                                 (
-                                                                                    (xx) =>
-                                                                                    {
-                                                                                        return x.PropertyType == xx;
-                                                                                    }
-                                                                                 );
-                                                        }
-                                                    )
-                                                    .ToList();
+            var properties
+                = type
+                    .GetProperties()
+                        .Where
+                            (
+                                (x) =>
+                                {
+                                    var r =
+                                        _typesWhiteList.Any
+                                                            (
+                                                                (xx) =>
+                                                                {
+                                                                    var propertyType = x.PropertyType;
+                                                                    if (TypeHelper.IsNullableType(propertyType))
+                                                                    {
+                                                                        propertyType = TypeHelper.GetNullableTypeUnderlyingType(propertyType);
+                                                                    }
+                                                                    var rr = (propertyType == xx);
+                                                                    return rr;
+                                                                }
+                                                            );
+                                    return r;
+                                }
+                            )
+                            .OrderBy
+                            (
+                                (x) =>
+                                {
+                                    var r = 0;
+                                    var attribute = x.GetCustomAttributes(typeof(DataTableColumnDefinitionAttribute), false).FirstOrDefault(); //as DataTableColumnIDAttribute;
+                                    if (attribute != null)
+                                    {
+                                        var dataTableColumnDefinitionAttribute = attribute as DataTableColumnDefinitionAttribute;
+                                        if (dataTableColumnDefinitionAttribute != null)
+                                        {
+                                            r = dataTableColumnDefinitionAttribute.ColumnID;
+                                        }
+                                    }
+                                    return r;
+                                }
+                            )
+                            .ToList();
+
             DataTable dataTable = null;
             DataColumnCollection dataColumnsCollection = null;
             properties.ForEach
@@ -208,10 +86,30 @@ namespace Microshaoft
                                 {
                                     dataColumnsCollection = dataTable.Columns;
                                 }
+                                Type propertyType = x.PropertyType;
+                                if (propertyType.IsGenericType)
+                                {
+                                    propertyType = Nullable.GetUnderlyingType(propertyType);
+                                }
+                                var columnName = x.Name;
+                                var attribute = x.GetCustomAttributes(typeof(DataTableColumnDefinitionAttribute), false).FirstOrDefault(); //as DataTableColumnIDAttribute;
+
+                                if (attribute != null)
+                                {
+                                    var dataTableColumnDefinitionAttribute = attribute as DataTableColumnDefinitionAttribute;
+                                    if (dataTableColumnDefinitionAttribute != null)
+                                    {
+                                        if (!string.IsNullOrEmpty(dataTableColumnDefinitionAttribute.ColumnName))
+                                        {
+                                            columnName = dataTableColumnDefinitionAttribute.ColumnName;
+                                        }
+
+                                    }
+                                }
                                 dataColumnsCollection.Add
                                                     (
-                                                        x.Name
-                                                        , x.PropertyType
+                                                        columnName
+                                                        , propertyType
                                                     );
                             }
                         );
@@ -306,5 +204,37 @@ namespace Microshaoft
         }
     }
 }
+namespace Microshaoft
+{
+    using System;
+    using System.Net;
+    using Newtonsoft.Json;
+    using System.Collections;
 
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, Inherited = true)]
+    public class DataTableColumnDefinitionAttribute : Attribute
+    {
+
+        public DataTableColumnDefinitionAttribute(int columnID)
+        {
+            ColumnID = columnID;
+        }
+        public int ColumnID
+        {
+            get;
+            private set;
+        }
+        public string ColumnName
+        {
+            get;
+            private set;
+        }
+        public DataTableColumnDefinitionAttribute(int columnID, string columnName)
+        {
+            ColumnID = columnID;
+            ColumnName = columnName;
+        }
+
+    }
+}
 
