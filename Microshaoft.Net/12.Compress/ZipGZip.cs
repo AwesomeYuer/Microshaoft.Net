@@ -94,7 +94,7 @@ namespace ConsoleApplication
     using System;
     using System.IO;
     using System.IO.Compression;
-    class Program
+    class Program1111
     {
         static void Main(string[] args)
         {

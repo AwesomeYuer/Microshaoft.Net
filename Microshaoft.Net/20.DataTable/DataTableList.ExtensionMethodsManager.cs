@@ -240,7 +240,7 @@ namespace Microshaoft
                         , (x) =>
                         {
                             if (
-                                    _typesWhiteList.Exists
+                                    _typesWhiteList.Any
                                                     (
                                                         (xx) =>
                                                         {

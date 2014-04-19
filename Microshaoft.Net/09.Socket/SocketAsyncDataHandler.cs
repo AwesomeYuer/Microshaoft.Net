@@ -368,14 +368,14 @@
                                 , EndPoint
                                 , byte[]
                                 , SocketAsyncEventArgs
-                                , bool
+                                , bool                      //是否继续收
                             > onDataReceivedProcessFunc
                         , Func
                             <
                                 SocketAsyncDataHandler<T>
                                 , SocketAsyncEventArgs
                                 , Exception
-                                , bool
+                                , bool                      //是否Rethrow
                             > onCaughtExceptionProcessFunc = null
                     )
         {
@@ -383,54 +383,61 @@
             {
                 ReceiveSocketAsyncEventArgs = receiveSocketAsyncEventArgs;
                 ReceiveSocketAsyncEventArgs.RemoteEndPoint = remoteEndPoint;
-                ReceiveSocketAsyncEventArgs.Completed += new EventHandler<SocketAsyncEventArgs>
-                                                (
-                                                    (sender, e) =>
-                                                    {
-                                                        Interlocked.Increment(ref _receivedCount);
-                                                        var socket = sender as Socket;
-                                                        int l = e.BytesTransferred;
-                                                        //Console.WriteLine(l);
-                                                        if (l > 0)
-                                                        {
-                                                            byte[] data = new byte[l];
-                                                            var buffer = e.Buffer;
-                                                            Buffer.BlockCopy(buffer, 0, data, 0, data.Length);
-                                                            if (onDataReceivedProcessFunc != null)
-                                                            {
-                                                                var fromRemoteIPEndPoint = e.RemoteEndPoint;
-                                                                onDataReceivedProcessFunc
-                                                                        (
-                                                                            this
-                                                                            , fromRemoteIPEndPoint
-                                                                            , data
-                                                                            , e
-                                                                        );
-                                                                //Console.WriteLine(_receivedCount);
-                                                            }
-                                                        }
-                                                        if (!_isWorkingSocketDestoryed)
-                                                        {
-                                                            try
-                                                            {
-                                                                socket.ReceiveFromAsync(ReceiveSocketAsyncEventArgs);
-                                                            }
-                                                            catch (Exception exception)
-                                                            {
-                                                                //Console.WriteLine(exception.ToString());
-                                                                var r = false;
-                                                                if (onCaughtExceptionProcessFunc != null)
-                                                                {
-                                                                    r = onCaughtExceptionProcessFunc(this, ReceiveSocketAsyncEventArgs, exception);
-                                                                }
-                                                                if (r)
-                                                                {
-                                                                    DestoryWorkingSocket();
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                );
+                ReceiveSocketAsyncEventArgs
+                    .Completed +=
+                        new EventHandler<SocketAsyncEventArgs>
+                                (
+                                    (sender, e) =>
+                                    {
+                                        Interlocked.Increment(ref _receivedCount);
+                                        var socket = sender as Socket;
+                                        int l = e.BytesTransferred;
+                                        //Console.WriteLine(l);
+                                        if (l > 0)
+                                        {
+                                            byte[] data = new byte[l];
+                                            var buffer = e.Buffer;
+                                            Buffer.BlockCopy(buffer, 0, data, 0, data.Length);
+                                            if (onDataReceivedProcessFunc != null)
+                                            {
+                                                var fromRemoteIPEndPoint = e.RemoteEndPoint;
+                                                onDataReceivedProcessFunc
+                                                        (
+                                                            this
+                                                            , fromRemoteIPEndPoint
+                                                            , data
+                                                            , e
+                                                        );
+                                                //Console.WriteLine(_receivedCount);
+                                            }
+                                        }
+                                        if (!_isWorkingSocketDestoryed)
+                                        {
+                                            try
+                                            {
+                                                socket.ReceiveFromAsync(ReceiveSocketAsyncEventArgs);
+                                            }
+                                            catch (Exception exception)
+                                            {
+                                                //Console.WriteLine(exception.ToString());
+                                                var r = false;
+                                                if (onCaughtExceptionProcessFunc != null)
+                                                {
+                                                    r = onCaughtExceptionProcessFunc
+                                                            (
+                                                                this
+                                                                , ReceiveSocketAsyncEventArgs
+                                                                , exception
+                                                            );
+                                                }
+                                                if (r)
+                                                {
+                                                    DestoryWorkingSocket();
+                                                }
+                                            }
+                                        }
+                                    }
+                                );
                 _socket.ReceiveFromAsync(ReceiveSocketAsyncEventArgs);
                 _isStartedReceiveData = true;
             }
@@ -457,20 +464,30 @@
                   , bool blockForResponse
                   , AutoResetEvent waiter
                   , TToken token
-                  , Func<TToken, Tuple<bool, bool>> onSetAutoResetEventProcessFunc
+                  , Func
+                        <
+                            TToken
+                            , Tuple
+                                <
+                                    bool        //是否继续等待
+                                    , bool      //送达结果(是否收到应答)
+                                >
+                        > onSetAutoResetEventProcessFunc
                   , out int sendTimes
                   , out long elapsedMilliseconds
                   , Stopwatch stopWatch = null
                   , Func<int, TToken, byte[]> onBeforeSendOnceProcessFunc = null
-                  , Action<int> onAfterSendedOnceProcessAction = null
+                  , Action<int, byte[]> onAfterSendedOnceProcessAction = null
+                  , Func<SocketAsyncDataHandler<T>, Exception, bool> onCaughtExceptionProcessFunc = null
                   , int sendMaxTimes = 100
                   , int resendWaitOneIntervalsInMillisecondsFactor = 1
                   , int waitOneIntervalsInMilliseconds = 1000
-
               )
         {
             var r = false;
             elapsedMilliseconds = 0;
+            int tempSendTimes = 0;
+            long tempElapsedMilliseconds = 0;
             if (stopWatch != null)
             {
                 if (!stopWatch.IsRunning)
@@ -481,94 +498,115 @@
             AutoResetEvent autoResetEvent = waiter;
             int i = 0;
             var nextWaitOneIntervalsInMilliseconds = waitOneIntervalsInMilliseconds;
-            try
-            {
-                var continueWaiting = true;
-                while
+            TryCatchFinallyProcessHelper
+                .TryProcessCatchFinally
                     (
-                        i < sendMaxTimes
-                        && continueWaiting
-                        && !r
-                    )
-                {
-                    #region loop body
-                    if (onBeforeSendOnceProcessFunc != null)
-                    {
-                        data = onBeforeSendOnceProcessFunc(i, token);
-                    }
-                    SendDataToSync
-                        (
-                            data
-                            , remoteIPEndPoint
-                        );
-                    i++;
-                    if (onAfterSendedOnceProcessAction != null)
-                    {
-                        onAfterSendedOnceProcessAction(i);
-                    }
-                    if (!blockForResponse)
-                    {
-                        break;
-                    }
-                    Tuple<bool, bool> tuple = null;
-                    if (autoResetEvent != null)
-                    {
-                        tuple = onSetAutoResetEventProcessFunc(token);
-                        if (tuple.Item1)                 //是否继续等待
+                        true
+                        , () =>
                         {
-                            //继续等待
-                            bool b = autoResetEvent.WaitOne(nextWaitOneIntervalsInMilliseconds, true);
-                            if (b)
+                            var continueWaiting = true;
+                            while
+                                (
+                                    i < sendMaxTimes
+                                    && continueWaiting
+                                    && !r
+                                )
                             {
-                                // 有信号
-                                r = true;
-                                break;
+                                #region loop body
+                                if (onBeforeSendOnceProcessFunc != null)
+                                {
+                                    data = onBeforeSendOnceProcessFunc(i, token);
+                                }
+                                SendDataToSync
+                                    (
+                                        data
+                                        , remoteIPEndPoint
+                                    );
+                                i++;
+                                if (onAfterSendedOnceProcessAction != null)
+                                {
+                                    onAfterSendedOnceProcessAction(i, data);
+                                }
+                                if (!blockForResponse)
+                                {
+                                    r = true;
+                                    break;
+                                }
+                                Tuple<bool, bool> tuple = null;
+                                if (autoResetEvent != null)
+                                {
+                                    tuple = onSetAutoResetEventProcessFunc(token);
+                                    if (tuple.Item1)                 //是否继续等待
+                                    {
+                                        //继续等待
+                                        bool b = autoResetEvent.WaitOne(nextWaitOneIntervalsInMilliseconds, true);
+                                        if (b)
+                                        {
+                                            // 有信号
+                                            r = true;
+                                            break;
+                                        }
+                                        nextWaitOneIntervalsInMilliseconds
+                                            += (waitOneIntervalsInMilliseconds * resendWaitOneIntervalsInMillisecondsFactor);
+                                    }
+                                    else
+                                    {
+                                        //不继续等待
+                                        continueWaiting = false;
+                                        if (!r)
+                                        {
+                                            r = tuple.Item2;       //可能的送达结果=false 或未知 因为不继续等待了
+                                        }
+                                        break;
+                                    }
+                                }
+                                #endregion
                             }
-                            nextWaitOneIntervalsInMilliseconds += (waitOneIntervalsInMilliseconds * resendWaitOneIntervalsInMillisecondsFactor);
                         }
-                        else
+                        , false
+                        , (x) =>        //catch
                         {
-                            //不继续等待
-                            continueWaiting = false;
-                            if (!r)
+                            var reThrowException = false;
+                            if (onCaughtExceptionProcessFunc != null)
                             {
-                                r = tuple.Item2;       //可能的送达结果=false 或未知 因为不继续等待了
+                                reThrowException = onCaughtExceptionProcessFunc(this, x);
                             }
-                            break;
+                            return reThrowException;
                         }
-
-                    }
-                    #endregion
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-            finally
-            {
-                if (blockForResponse)
-                {
-                    if (stopWatch != null)
-                    {
-                        if (stopWatch.IsRunning)
+                        , (x, y) =>     //finally
                         {
-                            stopWatch.Stop();
-                        }
-                        elapsedMilliseconds = stopWatch.ElapsedMilliseconds;
-                    }
-                    if (autoResetEvent != null)
-                    {
-                        autoResetEvent.Close();
+                            if (blockForResponse)
+                            {
+                                if (stopWatch != null)
+                                {
+                                    if (stopWatch.IsRunning)
+                                    {
+                                        stopWatch.Stop();
+                                    }
+                                    tempElapsedMilliseconds = stopWatch.ElapsedMilliseconds;
+                                }
+                                if (autoResetEvent != null)
+                                {
+                                    if
+                                        (
+                                            !autoResetEvent.SafeWaitHandle.IsClosed
+                                            && !autoResetEvent.SafeWaitHandle.IsInvalid
+                                        )
+                                    {
+                                        autoResetEvent.Close();
 #if NET45
-                        autoResetEvent.Dispose();
+                                            autoResetEvent.Dispose();
 #endif
-                        autoResetEvent = null;
-                        //autoResetEventWaiter = null;
-                    }
-                }
-                sendTimes = i;
-            }
+                                        autoResetEvent = null;
+                                        //autoResetEventWaiter = null;
+                                    }
+                                }
+                            }
+                            tempSendTimes = i;
+                        }
+                    );
+            sendTimes = tempSendTimes;
+            elapsedMilliseconds = tempElapsedMilliseconds;
             return r;
         }
         public int SendDataSyncWithRetry
@@ -629,22 +667,18 @@
                 //}
                 //lock (_sendStaticSyncLockObject)
                 {
-
                     r = _socket.SendTo(data, remoteEndPoint);
                 }
                 if (sleepMilliseconds > 0)
                 {
                     Thread.Sleep(sleepMilliseconds);
                 }
-
                 //if (onAfterSendedProcessAction != null)
                 //{
                 //    onAfterSendedProcessAction();
                 //}
-
             }
             return r;
         }
-
     }
 }

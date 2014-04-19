@@ -3,20 +3,41 @@
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.SqlTypes;
     using System.Linq;
-
     public static class DataTableHelper
     {
-        private static List<Type> _typesWhiteList = new List<Type>()
-														{
-															typeof(int)
-															//, typeof(int?)
-															, typeof(long)
-															//, typeof(long?)
-															, typeof(string)
-															, typeof(DateTime)
-															//, typeof(DateTime?)
-														};
+        private static List<Type> _typesWhiteList =
+                            new Func<List<Type>>
+                                    (
+                                        () =>
+                                        {
+                                            var r = new List<Type>()
+												{
+													typeof(int)
+													//, typeof(int?)
+													, typeof(long)
+													//, typeof(long?)
+													, typeof(string)
+													, typeof(DateTime)
+													//, typeof(DateTime?)
+												};
+                                            var sqlTypes = AssemblyHelper.GetAssembliesTypes
+                                                    (
+                                                        (x, y) =>
+                                                        {
+                                                            return
+                                                                (
+                                                                    x.Namespace == "System.Data.SqlTypes"
+                                                                    && x.IsValueType
+                                                                    && typeof(INullable).IsAssignableFrom(x)
+                                                                );
+                                                        }
+                                                    );
+                                            r.AddRange(sqlTypes);
+                                            return r;
+                                        }
+                                    )();
         public static DataTable GenerateEmptyDataTable<T>()
         {
             var type = typeof(T);
@@ -26,55 +47,90 @@
         public static DataTable GenerateEmptyDataTable
                 (
                     Type type
-
                 )
         {
-            var properties
+            var dataColumns
                 = type
                     .GetProperties()
                         .Where
-                            (
-                                (x) =>
-                                {
-                                    var r =
-                                        _typesWhiteList.Any
-                                                            (
-                                                                (xx) =>
+                        (
+                            (x) =>
+                            {
+                                var r =
+                                    _typesWhiteList.Any
+                                                        (
+                                                            (xx) =>
+                                                            {
+                                                                var propertyType = x.PropertyType;
+                                                                if (TypeHelper.IsNullableType(propertyType))
                                                                 {
-                                                                    var propertyType = x.PropertyType;
-                                                                    if (TypeHelper.IsNullableType(propertyType))
-                                                                    {
-                                                                        propertyType = TypeHelper.GetNullableTypeUnderlyingType(propertyType);
-                                                                    }
-                                                                    var rr = (propertyType == xx);
-                                                                    return rr;
+                                                                    propertyType = TypeHelper.GetNullableTypeUnderlyingType(propertyType);
                                                                 }
-                                                            );
-                                    return r;
-                                }
-                            )
-                            .OrderBy
-                            (
-                                (x) =>
+                                                                var rr = (propertyType == xx);
+                                                                return rr;
+                                                            }
+                                                        );
+                                return r;
+                            }
+                        )
+                        .Select
+                        (
+                            (x) =>
+                            {
+                                var columnID = 0;
+                                var columnName = x.Name;
+                                var columnType = x.PropertyType;
+                                var attribute = x.GetCustomAttributes(typeof(DataTableColumnDefinitionAttribute), false).FirstOrDefault(); //as DataTableColumnIDAttribute;
+                                if (attribute != null)
                                 {
-                                    var r = 0;
-                                    var attribute = x.GetCustomAttributes(typeof(DataTableColumnDefinitionAttribute), false).FirstOrDefault(); //as DataTableColumnIDAttribute;
-                                    if (attribute != null)
+                                    var dataTableColumnDefinitionAttribute = attribute as DataTableColumnDefinitionAttribute;
+                                    if (dataTableColumnDefinitionAttribute != null)
                                     {
-                                        var dataTableColumnDefinitionAttribute = attribute as DataTableColumnDefinitionAttribute;
-                                        if (dataTableColumnDefinitionAttribute != null)
+                                        if (dataTableColumnDefinitionAttribute.ColumnID != null)
                                         {
-                                            r = dataTableColumnDefinitionAttribute.ColumnID;
+                                            columnID = dataTableColumnDefinitionAttribute.ColumnID.Value;
+                                        }
+                                        if
+                                            (
+                                                !string.IsNullOrEmpty(dataTableColumnDefinitionAttribute.ColumnName)
+                                            )
+                                        {
+                                            columnName = dataTableColumnDefinitionAttribute.ColumnName;
+                                        }
+                                        if (dataTableColumnDefinitionAttribute.ColumnSqlType != null)
+                                        {
+                                            columnType = dataTableColumnDefinitionAttribute.ColumnSqlType;
                                         }
                                     }
-                                    return r;
+
                                 }
-                            )
-                            .ToList();
+                                if (TypeHelper.IsNullableType(columnType))
+                                {
+                                    columnType = TypeHelper.GetNullableTypeUnderlyingType(columnType);
+                                }
+                                var r = new
+                                {
+                                    ColumnID = columnID
+                                    ,
+                                    ColumnName = columnName
+                                    ,
+                                    ColumnType = columnType
+                                };
+                                return r;
+                            }
+                        )
+                        .OrderBy
+                        (
+                            (x) =>
+                            {
+                                return x.ColumnID;
+                            }
+                        )
+                        .ToList();
 
             DataTable dataTable = null;
             DataColumnCollection dataColumnsCollection = null;
-            properties.ForEach
+            dataColumns.ForEach
                         (
                             (x) =>
                             {
@@ -86,30 +142,10 @@
                                 {
                                     dataColumnsCollection = dataTable.Columns;
                                 }
-                                Type propertyType = x.PropertyType;
-                                if (propertyType.IsGenericType)
-                                {
-                                    propertyType = Nullable.GetUnderlyingType(propertyType);
-                                }
-                                var columnName = x.Name;
-                                var attribute = x.GetCustomAttributes(typeof(DataTableColumnDefinitionAttribute), false).FirstOrDefault(); //as DataTableColumnIDAttribute;
-
-                                if (attribute != null)
-                                {
-                                    var dataTableColumnDefinitionAttribute = attribute as DataTableColumnDefinitionAttribute;
-                                    if (dataTableColumnDefinitionAttribute != null)
-                                    {
-                                        if (!string.IsNullOrEmpty(dataTableColumnDefinitionAttribute.ColumnName))
-                                        {
-                                            columnName = dataTableColumnDefinitionAttribute.ColumnName;
-                                        }
-
-                                    }
-                                }
                                 dataColumnsCollection.Add
                                                     (
-                                                        columnName
-                                                        , propertyType
+                                                        x.ColumnName
+                                                        , x.ColumnType
                                                     );
                             }
                         );
@@ -204,37 +240,3 @@
         }
     }
 }
-namespace Microshaoft
-{
-    using System;
-    using System.Net;
-    using Newtonsoft.Json;
-    using System.Collections;
-
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, Inherited = true)]
-    public class DataTableColumnDefinitionAttribute : Attribute
-    {
-
-        public DataTableColumnDefinitionAttribute(int columnID)
-        {
-            ColumnID = columnID;
-        }
-        public int ColumnID
-        {
-            get;
-            private set;
-        }
-        public string ColumnName
-        {
-            get;
-            private set;
-        }
-        public DataTableColumnDefinitionAttribute(int columnID, string columnName)
-        {
-            ColumnID = columnID;
-            ColumnName = columnName;
-        }
-
-    }
-}
-

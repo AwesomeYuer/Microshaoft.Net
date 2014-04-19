@@ -63,6 +63,7 @@
     <Compile Include="..\Projects.Common.AssemblyInfo.cs">
       <Link>Properties\Projects.Common.AssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="00.Assembly\AssemblyHelper.cs" />
     <Compile Include="00.Utilities\BytesHelper.cs" />
     <Compile Include="00.Utilities\StringHelper.cs" />
     <Compile Include="06.MEF\MEF.Contracts.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="10.WindowsForm\TaskProcesserHelper.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="11.EventLog\EventLogHelper.cs" />
+    <Compile Include="11.ExceptionStackTrace\StackTraceHelper.cs" />
     <Compile Include="11.XML\CDATA.cs" />
     <Compile Include="12.Compress\CompressHelper.cs" />
     <Compile Include="00.Utilities\CryptographyHelper.cs" />
@@ -118,6 +121,7 @@
     <Compile Include="12.ExtensionsMethods\ExtensionsMethodsManager.cs" />
     <Compile Include="12.FTP\FtpWebRequestResponseHelper.cs" />
     <Compile Include="13.FileProcess\FileReadLineHelper.cs" />
+    <Compile Include="20.DataTable\DataTableColumnDefinitionAttribute.cs" />
     <Compile Include="20.DataTable\DataTableHelper.cs" />
     <Compile Include="20.DataTable\DataTableList.ExtensionMethodsManager.cs" />
     <Compile Include="88.Console\ConsoleReadMaskLine.cs" />

@@ -32,27 +32,5 @@ namespace Microshaoft
         {
             get { return _data; }
         }
-        public static void Load(Func<Type, Assembly, bool> predicateFunc)
-        {
-            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-            foreach (var assembly in assemblies)
-            {
-                var types = assembly.GetLoadableTypes().Where
-                (
-                    (x) =>
-                    {
-                        return predicateFunc(x, assembly);
-                    }
-                );
-                foreach (var type in types)
-                {
-                    _data.TryAdd
-                        (
-                            type.FullName
-                            , new XmlSerializer(type) 
-                        );
-                }
-            }
-        }
     }
 }
