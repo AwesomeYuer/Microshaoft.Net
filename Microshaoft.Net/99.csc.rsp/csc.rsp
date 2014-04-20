@@ -1028,34 +1028,33 @@
 
 # 以下为常用的 Nuget 引用,注意引用正确路径!
 /r:D:\Microshaoft.Nuget.Packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\net35-client\Microsoft.Contracts.dll
 /r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\net40-client\DELETE_ME.dll
-#/r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\sl3-wp\Microsoft.Contracts.dll
-/r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\sl4\Microsoft.Contracts.dll
-/r:D:\Microshaoft.Nuget.Packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll
-#/r:D:\Microshaoft.Nuget.Packages\CommonServiceLocator.1.0\lib\SL30\Microsoft.Practices.ServiceLocation.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll
+/r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\net35-client\Microsoft.Contracts.dll
+# /r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\sl3-wp\Microsoft.Contracts.dll
+# /r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\sl4\Microsoft.Contracts.dll
+/r:D:\Microshaoft.Nuget.Packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll
+# /r :D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll
 /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll
 /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OAuth.Consumer.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OAuth.Consumer.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll
 /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OAuth.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OAuth.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll
 /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OpenId.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\Mono.Math.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\Org.Mentalis.Security.Cryptography.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\Mono.Math.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\Org.Mentalis.Security.Cryptography.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OpenId.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll
 /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\Mono.Math.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\Mono.Math.dll
 /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\Mono.Math.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\Org.Mentalis.Security.Cryptography.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\Org.Mentalis.Security.Cryptography.dll
 /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\Org.Mentalis.Security.Cryptography.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OpenId.RelyingParty.dll
-#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OpenId.RelyingParty.dll
+# /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll
 /r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll
@@ -1064,9 +1063,9 @@
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.ExceptionHandling.WCF.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.PolicyInjection.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll
-/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.1.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.dll
-/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.Database.1.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Database.dll
-/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.WindowsAzure.1.0.1304.1\lib\NET45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.WindowsAzure.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.1.1.1403.1\lib\net45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.Database.1.1.1403.1\lib\net45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Database.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.WindowsAzure.1.1.1403.1\lib\net45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.WindowsAzure.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll
@@ -1078,157 +1077,194 @@
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Validation.Integration.WCF.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Validation.Integration.WinForms.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll
 /r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Validation.Integration.WPF.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WPF.dll
-#/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\lib\net40\EntityFramework.dll
-#/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\lib\net40\EntityFramework.SqlServer.dll
-/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll
-/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll
-/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\tools\EntityFramework.PowerShell.dll
-/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\tools\EntityFramework.PowerShell.Utility.dll
-#/r:D:\Microshaoft.Nuget.Packages\Ix-Async.1.2.2\lib\net40\System.Interactive.Async.dll
+# /r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.1.0\lib\net40\EntityFramework.dll
+/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll
+/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.1.0\tools\EntityFramework.PowerShell.dll
+/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.1.0\tools\EntityFramework.PowerShell.Utility.dll
+# /r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.1.0\lib\net40\EntityFramework.SqlServer.dll
+/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.1.8.1\lib\net40\Google.Apis.dll
+/r:D:\Microshaoft.Nuget.Packages\Google.Apis.1.8.1\lib\netcore45\Google.Apis.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.1.8.1\lib\portable-net4+sl4+wp71+win8\Google.Apis.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.1.8.1\lib\wp8\Google.Apis.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.1.8.1\lib\net40\Google.Apis.PlatformServices.dll
+/r:D:\Microshaoft.Nuget.Packages\Google.Apis.1.8.1\lib\netcore45\Google.Apis.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.1.8.1\lib\wp8\Google.Apis.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.Auth.1.8.1\lib\net40\Google.Apis.Auth.dll
+/r:D:\Microshaoft.Nuget.Packages\Google.Apis.Auth.1.8.1\lib\netcore45\Google.Apis.Auth.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.Auth.1.8.1\lib\portable-net4+sl4+wp71+win8\Google.Apis.Auth.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.Auth.1.8.1\lib\wp8\Google.Apis.Auth.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.Auth.1.8.1\lib\net40\Google.Apis.Auth.PlatformServices.dll
+/r:D:\Microshaoft.Nuget.Packages\Google.Apis.Auth.1.8.1\lib\netcore45\Google.Apis.Auth.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Google.Apis.Auth.1.8.1\lib\wp8\Google.Apis.Auth.PlatformServices.dll
+/r:D:\Microshaoft.Nuget.Packages\Google.Apis.Core.1.8.1\lib\portable-net4+sl4+wp71+win8\Google.Apis.Core.dll
+/r:D:\Microshaoft.Nuget.Packages\Google.Apis.Tasks.v1.1.8.1.300\lib\portable-net4+sl4+wp71+win8\Google.Apis.Tasks.v1.dll
+# /r:D:\Microshaoft.Nuget.Packages\Ix-Async.1.2.2\lib\net40\System.Interactive.Async.dll
 /r:D:\Microshaoft.Nuget.Packages\Ix-Async.1.2.2\lib\net45\System.Interactive.Async.dll
-#/r:D:\Microshaoft.Nuget.Packages\Ix-Async.1.2.2\lib\portable-windows8+net45+wp8\System.Interactive.Async.dll
-#/r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\net40\System.Interactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\Ix-Async.1.2.2\lib\portable-windows8+net45+wp8\System.Interactive.Async.dll
+# /r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\net40\System.Interactive.dll
 /r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\net45\System.Interactive.dll
-#/r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\portable-windows8+net45+wp8\System.Interactive.dll
-#/r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\sl5\System.Interactive.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Cors.5.1.1\lib\net45\System.Web.Cors.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.2\lib\net40\Microsoft.AspNet.SignalR.Client.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.2\lib\net45\Microsoft.AspNet.SignalR.Client.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.2\lib\portable-net45+sl5+netcore45+wp8\Microsoft.AspNet.SignalR.Client.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Core.2.0.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Owin.1.2.0\lib\net40\Microsoft.AspNet.SignalR.Owin.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Owin.1.2.0\lib\net45\Microsoft.AspNet.SignalR.Owin.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.SystemWeb.2.0.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Client.5.1.1\lib\net45\System.Net.Http.Formatting.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Client.5.1.1\lib\portable-wp8+netcore45+net45\System.Net.Http.Formatting.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Core.5.1.1\lib\net45\System.Web.Http.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Cors.5.1.1\lib\net45\System.Web.Http.Cors.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Owin.5.1.1\lib\net45\System.Web.Http.Owin.dll
-/r:"D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.SelfHost.5.1.1\lib\net45\System.Web.Http.SelfHost.dll"
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Tracing.5.1.1\lib\net45\System.Web.Http.Tracing.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.WebHost.5.1.1\lib\net45\System.Web.Http.WebHost.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll
+# /r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\portable-windows8+net45+wp8\System.Interactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\sl5\System.Interactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\log4net.2.0.0\lib\net10-full\log4net.dll
+# /r:D:\Microshaoft.Nuget.Packages\log4net.2.0.0\lib\net11-full\log4net.dll
+# /r:D:\Microshaoft.Nuget.Packages\log4net.2.0.0\lib\net20-cf\log4net.dll
+# /r:D:\Microshaoft.Nuget.Packages\log4net.2.0.0\lib\net20-full\log4net.dll
+# /r:D:\Microshaoft.Nuget.Packages\log4net.2.0.0\lib\net35-client\log4net.dll
+# /r:D:\Microshaoft.Nuget.Packages\log4net.2.0.0\lib\net35-full\log4net.dll
+# /r:D:\Microshaoft.Nuget.Packages\log4net.2.0.0\lib\net40-client\log4net.dll
+/r:D:\Microshaoft.Nuget.Packages\log4net.2.0.0\lib\net40-full\log4net.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Cors.5.1.2\lib\net45\System.Web.Cors.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.3\lib\net40\Microsoft.AspNet.SignalR.Client.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.3\lib\net45\Microsoft.AspNet.SignalR.Client.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.3\lib\portable-net45+sl5+netcore45+wp8\Microsoft.AspNet.SignalR.Client.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Core.2.0.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Owin.1.2.1\lib\net40\Microsoft.AspNet.SignalR.Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Owin.1.2.1\lib\net45\Microsoft.AspNet.SignalR.Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.SystemWeb.2.0.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\portable-wp8+netcore45+net45\System.Net.Http.Formatting.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Cors.5.1.2\lib\net45\System.Web.Http.Cors.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Owin.5.1.2\lib\net45\System.Web.Http.Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.SelfHost.5.1.2\lib\net45\System.Web.Http.SelfHost.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Tracing.5.1.2\lib\net45\System.Web.Http.Tracing.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.WebHost.5.1.2\lib\net45\System.Web.Http.WebHost.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.Data.3.1.1\lib\net45\WebMatrix.Data.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.OAuth.3.1.1\lib\net45\Microsoft.Web.WebPages.OAuth.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.WebData.3.1.1\lib\net45\WebMatrix.WebData.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\net40\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\net40\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\net40\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp8\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp8\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp8\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl5+win8+wp8\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl5+win8+wp8\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl5+win8+wp8\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8+wp8\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8+wp8\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8+wp8\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4-windowsphone71\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4-windowsphone71\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4-windowsphone71\System.Threading.Tasks.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl5\System.IO.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl5\System.Runtime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl5\System.Threading.Tasks.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.Tasks.dll
-# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\native\ARM\ClrCompression.dll
-# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\native\x86\ClrCompression.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\portable-net45+win8+wp8\System.IO.Compression.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\portable-net45+wp8\System.IO.Compression.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\wp8\System.IO.Compression.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.OAuth.3.1.2\lib\net45\Microsoft.Web.WebPages.OAuth.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.WebData.3.1.2\lib\net45\WebMatrix.WebData.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\net40\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp71+wpa81\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8+wp8+wpa81\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl4\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl4-windowsphone71\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl5\System.IO.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\net40\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8+wp8+wpa81\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl4\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl4-windowsphone71\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl5\System.Runtime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\net40\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp71+wpa81\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8+wp8+wpa81\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl4\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl4-windowsphone71\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.8\lib\sl5\System.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\net40\Microsoft.Threading.Tasks.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\net45\Microsoft.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\portable-net40+sl4+win8+wp71\Microsoft.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\portable-net45+win8\Microsoft.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\portable-net45+win8+wp8\Microsoft.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\sl4\Microsoft.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\wp8\Microsoft.Threading.Tasks.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\net40\Microsoft.Threading.Tasks.Extensions.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\net45\Microsoft.Threading.Tasks.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\portable-net40+sl4+win8+wp71\Microsoft.Threading.Tasks.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\portable-net45+win8\Microsoft.Threading.Tasks.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\portable-net45+win8+wp8\Microsoft.Threading.Tasks.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\sl4\Microsoft.Threading.Tasks.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\wp8\Microsoft.Threading.Tasks.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.Extensions.Phone.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Async.1.0.16\lib\sl4\Microsoft.Threading.Tasks.Extensions.Silverlight.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.83\lib\native\ARM\ClrCompression.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.83\lib\native\x86\ClrCompression.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.83\lib\portable-net45+win8+wp8+wpa81\System.IO.Compression.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.83\lib\portable-net45+wp8+wpa81\System.IO.Compression.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.83\lib\wp8\System.IO.Compression.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Immutable.1.0.30\lib\portable-net45+win8+wp8\System.Collections.Immutable.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.AttributedModel.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Convention.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Hosting.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Runtime.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.TypedParts.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\de\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\es\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\fr\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\it\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\ja\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\ko\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\ru\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\zh-Hans\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\zh-Hant\Microsoft.Data.Edm.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\Microsoft.Data.Edm.Portable.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\de\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\es\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\fr\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\it\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\ja\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\ko\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\ru\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hans\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hant\Microsoft.Data.Edm.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\Microsoft.Data.Edm.SL.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\de\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\es\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\fr\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\it\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\ja\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\ko\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\ru\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\zh-Hans\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\zh-Hant\Microsoft.Data.Edm.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\de\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\es\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\fr\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\it\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\ja\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\ko\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\ru\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\zh-Hans\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\zh-Hant\Microsoft.Data.OData.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\Microsoft.Data.OData.Portable.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\de\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\es\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\fr\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\it\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\ja\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\ko\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\ru\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hans\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hant\Microsoft.Data.OData.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\Microsoft.Data.OData.SL.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\de\Microsoft.Data.OData.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\es\Microsoft.Data.OData.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\fr\Microsoft.Data.OData.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\it\Microsoft.Data.OData.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\ja\Microsoft.Data.OData.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\ko\Microsoft.Data.OData.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\ru\Microsoft.Data.OData.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\zh-Hans\Microsoft.Data.OData.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\zh-Hant\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\Microsoft.Data.Edm.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\Microsoft.Data.Edm.Portable.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\de\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\es\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\fr\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\it\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\ja\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\ko\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\ru\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\zh-Hans\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\portable-net40+sl5+wp8+win8\zh-Hant\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\de\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\es\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\fr\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\it\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\ja\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\ko\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\ru\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\zh-Hans\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\net40\zh-Hant\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\Microsoft.Data.Edm.SL.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\de\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\es\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\fr\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\it\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\ja\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\ko\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\ru\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\zh-Hans\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.1\lib\sl4\zh-Hant\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\Microsoft.Data.OData.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\Microsoft.Data.OData.Portable.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\de\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\es\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\fr\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\it\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\ja\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\ko\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\ru\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\zh-Hans\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\portable-net40+sl5+wp8+win8\zh-Hant\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\de\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\es\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\fr\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\it\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\ja\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\ko\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\ru\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\zh-Hans\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\net40\zh-Hant\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\Microsoft.Data.OData.SL.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\de\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\es\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\fr\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\it\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\ja\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\ko\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\ru\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\zh-Hans\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.1\lib\sl4\zh-Hant\Microsoft.Data.OData.SL.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\Microsoft.Data.Services.Client.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\de\Microsoft.Data.Services.Client.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\es\Microsoft.Data.Services.Client.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\fr\Microsoft.Data.Services.Client.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\it\Microsoft.Data.Services.Client.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ja\Microsoft.Data.Services.Client.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ko\Microsoft.Data.Services.Client.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ru\Microsoft.Data.Services.Client.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\zh-Hans\Microsoft.Data.Services.Client.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\zh-Hant\Microsoft.Data.Services.Client.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\Microsoft.Data.Services.Client.Portable.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\de\Microsoft.Data.Services.Client.Portable.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\es\Microsoft.Data.Services.Client.Portable.resources.dll
@@ -1239,6 +1275,15 @@
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\ru\Microsoft.Data.Services.Client.Portable.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\zh-Hans\Microsoft.Data.Services.Client.Portable.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\zh-Hant\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\de\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\es\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\fr\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\it\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ja\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ko\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ru\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\zh-Hant\Microsoft.Data.Services.Client.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\Microsoft.Data.Services.Client.SL.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\de\Microsoft.Data.Services.Client.SL.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\es\Microsoft.Data.Services.Client.SL.resources.dll
@@ -1249,39 +1294,44 @@
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\ru\Microsoft.Data.Services.Client.SL.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\zh-Hans\Microsoft.Data.Services.Client.SL.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\zh-Hant\Microsoft.Data.Services.Client.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.0.0\lib\net40\Microsoft.Hadoop.Client.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.0.0\lib\net40\Microsoft.HDInsight.Threading.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.0.0\lib\net40\Microsoft.WindowsAzure.Management.HDInsight.Framework.Core.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.0.0\lib\net40\Microsoft.WindowsAzure.Management.HDInsight.Framework.dll
+
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.1.3\lib\net40\Microsoft.Hadoop.Client.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.1.3\lib\net40\Microsoft.HDInsight.Threading.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.1.3\lib\net40\Microsoft.WindowsAzure.Management.HDInsight.Framework.Core.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.1.3\lib\net40\Microsoft.WindowsAzure.Management.HDInsight.Framework.dll
+
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.2\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.2\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.Extensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.Primitives.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.WebRequest.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net45\System.Net.Http.Extensions.dll
-/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net45\System.Net.Http.Primitives.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Extensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Primitives.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net45+win8\System.Net.Http.Extensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net45+win8\System.Net.Http.Primitives.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\sl4-windowsphone71\System.Net.Http.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\win8\System.Net.Http.Extensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\win8\System.Net.Http.Primitives.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.2.1.0\lib\net40\Microsoft.Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.3\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.3\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\net40\System.Net.Http.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\sl4-windowsphone71\System.Net.Http.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\net40\System.Net.Http.Extensions.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\net45\System.Net.Http.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\portable-net45+win8\System.Net.Http.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\win8\System.Net.Http.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\wpa81\System.Net.Http.Extensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\net40\System.Net.Http.Primitives.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\net45\System.Net.Http.Primitives.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\portable-net45+win8\System.Net.Http.Primitives.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\win8\System.Net.Http.Primitives.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.20\lib\net40\System.Net.Http.WebRequest.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.2.1.0\lib\net40\Microsoft.Owin.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll
-/r:"D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Cors.2.1.0\lib\net45\Microsoft.Owin.Cors.dll"
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Cors.2.1.0\lib\net45\Microsoft.Owin.Cors.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Diagnostics.2.1.0\lib\net40\Microsoft.Owin.Diagnostics.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.FileSystems.2.1.0\lib\net40\Microsoft.Owin.FileSystems.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.HttpListener.2.1.0\lib\net40\Microsoft.Owin.Host.HttpListener.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.HttpListener.2.1.0\lib\net40\Microsoft.Owin.Host.HttpListener.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.HttpListener.2.1.0\lib\net45\Microsoft.Owin.Host.HttpListener.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net40\Microsoft.Owin.Host.SystemWeb.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net40\Microsoft.Owin.Host.SystemWeb.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Hosting.2.1.0\lib\net40\Microsoft.Owin.Hosting.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Hosting.2.1.0\lib\net40\Microsoft.Owin.Hosting.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Hosting.2.1.0\lib\net45\Microsoft.Owin.Hosting.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll
@@ -1289,170 +1339,157 @@
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.Jwt.2.1.0\lib\net45\Microsoft.Owin.Security.Jwt.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.StaticFiles.2.1.0\lib\net40\Microsoft.Owin.StaticFiles.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.StaticFiles.2.1.0\lib\net40\Microsoft.Owin.StaticFiles.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.StaticFiles.2.1.0\lib\net45\Microsoft.Owin.StaticFiles.dll
-#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Testing.2.1.0\lib\net40\Microsoft.Owin.Testing.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Testing.2.1.0\lib\net40\Microsoft.Owin.Testing.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Testing.2.1.0\lib\net45\Microsoft.Owin.Testing.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Tpl.Dataflow.4.5.14\lib\portable-net45+win8\System.Threading.Tasks.Dataflow.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll
 /r:D:\Microshaoft.Nuget.Packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll
-#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\net20\Newtonsoft.Json.dll
-#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\net35\Newtonsoft.Json.dll
-#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll
-#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll
-#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\sl3-wp\Newtonsoft.Json.dll
-#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\sl4\Newtonsoft.Json.dll
-#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\sl4-windowsphone71\Newtonsoft.Json.dll
-#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll
-#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\net20\Newtonsoft.Json.dll
-#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\net35\Newtonsoft.Json.dll
-#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll
-/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll
-#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\netcore45\Newtonsoft.Json.dll
-#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll
-#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll
+# /r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.2\lib\net20\Newtonsoft.Json.dll
+# /r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.2\lib\net35\Newtonsoft.Json.dll
+# /r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.2\lib\net40\Newtonsoft.Json.dll
+/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.2\lib\net45\Newtonsoft.Json.dll
+# /r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.2\lib\netcore45\Newtonsoft.Json.dll
+# /r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.2\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll
+# /r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.2\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll
+/r:D:\Microshaoft.Nuget.Packages\OpenXML\OpenXMLSDKV25\lib\DocumentFormat.OpenXml.dll
 /r:D:\Microshaoft.Nuget.Packages\Owin.1.0\lib\net40\Owin.dll
-#/r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.dll
-#/r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.Host.HttpListener.dll
-#/r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.Hosting.dll
-#/r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Owin.dll
-/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\NET40\Microsoft.Expression.Interactions.dll
-/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.dll
-/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.Interactivity.dll
-/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\NET40\System.Windows.Interactivity.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL4\Microsoft.Expression.Interactions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL4\Microsoft.Practices.Prism.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL4\Microsoft.Practices.Prism.Interactivity.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL4\System.Windows.Interactivity.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL5\Microsoft.Expression.Interactions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.Interactivity.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL5\System.Windows.Interactivity.dll
-/r:D:\Microshaoft.Nuget.Packages\Prism.MEFExtensions.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.MefExtensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.MEFExtensions.4.1.0.0\lib\SL4\Microsoft.Practices.Prism.MefExtensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.MEFExtensions.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.MefExtensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Expression.Interactions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Practices.Prism.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Practices.Prism.Interactivity.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\System.Windows.Interactivity.dll
+# /r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.dll
+# /r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.Host.HttpListener.dll
+# /r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.Hosting.dll
+# /r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.SharedInterfaces.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.MEFExtensions.5.0.0\lib\NET45\Microsoft.Practices.Prism.MefExtensions.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.dll
+# /r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\windows8\Microsoft.Practices.Prism.Mvvm.dll
+# /r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\windowsphone8\Microsoft.Practices.Prism.Mvvm.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\windowsphone8\Microsoft.Practices.Prism.Mvvm.Phone.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\windows8\Microsoft.Practices.Prism.Mvvm.Store.dll
+# /r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\windows8\Microsoft.Practices.Prism.SharedInterfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Prism.Mvvm.1.0.0\lib\windowsphone8\Microsoft.Practices.Prism.SharedInterfaces.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Expression.Interactions.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Practices.Prism.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Practices.Prism.Interactivity.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\System.Windows.Interactivity.dll
 /r:D:\Microshaoft.Nuget.Packages\Prism.PubSubEvents.1.0.0\lib\portable-sl4+wp7+windows8+net40\Microsoft.Practices.Prism.PubSubEvents.dll
 /r:D:\Microshaoft.Nuget.Packages\Prism.StoreApps.1.1.0\lib\windows8\Microsoft.Practices.Prism.StoreApps.dll
-/r:D:\Microshaoft.Nuget.Packages\Prism.UnityExtensions.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.UnityExtensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.UnityExtensions.4.1.0.0\lib\SL4\Microsoft.Practices.Prism.UnityExtensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Prism.UnityExtensions.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.UnityExtensions.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\net40\System.Reactive.Core.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.UnityExtensions.5.0.0\lib\NET45\Microsoft.Practices.Prism.UnityExtensions.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net35\System.Reactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net4\System.Reactive.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net45\System.Reactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL3-WP\System.Reactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL4\System.Reactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL5\System.Reactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\WinRT45\System.Reactive.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\Net35\System.Reactive.Windows.Threading.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\Net4\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL3-WP\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL4\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL5\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\net40\System.Reactive.Core.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\net45\System.Reactive.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\sl5\System.Reactive.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windows8\System.Reactive.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windowsphone71\System.Reactive.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windowsphone8\System.Reactive.Core.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\net40\System.Reactive.Experimental.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\sl5\System.Reactive.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windows8\System.Reactive.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windowsphone71\System.Reactive.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windowsphone8\System.Reactive.Core.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\net40\System.Reactive.Experimental.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\net45\System.Reactive.Experimental.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Experimental.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Experimental.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\sl5\System.Reactive.Experimental.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windows8\System.Reactive.Experimental.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windowsphone71\System.Reactive.Experimental.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windowsphone8\System.Reactive.Experimental.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\net40\System.Reactive.Interfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Experimental.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Experimental.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\sl5\System.Reactive.Experimental.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windows8\System.Reactive.Experimental.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windowsphone71\System.Reactive.Experimental.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windowsphone8\System.Reactive.Experimental.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\net40\System.Reactive.Interfaces.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\net45\System.Reactive.Interfaces.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Interfaces.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Interfaces.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\sl5\System.Reactive.Interfaces.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windows8\System.Reactive.Interfaces.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windowsphone71\System.Reactive.Interfaces.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windowsphone8\System.Reactive.Interfaces.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\net40\System.Reactive.Linq.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Interfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Interfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\sl5\System.Reactive.Interfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windows8\System.Reactive.Interfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windowsphone71\System.Reactive.Interfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windowsphone8\System.Reactive.Interfaces.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\net40\System.Reactive.Linq.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\net45\System.Reactive.Linq.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Linq.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Linq.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\sl5\System.Reactive.Linq.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windows8\System.Reactive.Linq.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windowsphone71\System.Reactive.Linq.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windowsphone8\System.Reactive.Linq.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\net40\System.Reactive.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Linq.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Linq.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\sl5\System.Reactive.Linq.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windows8\System.Reactive.Linq.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windowsphone71\System.Reactive.Linq.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windowsphone8\System.Reactive.Linq.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\net40\System.Reactive.PlatformServices.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\net45\System.Reactive.PlatformServices.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\portable-net40+sl5+win8+wp8\System.Reactive.PlatformServices.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\portable-windows8+net45+wp8\System.Reactive.PlatformServices.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\sl5\System.Reactive.PlatformServices.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windows8\System.Reactive.PlatformServices.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windowsphone71\System.Reactive.PlatformServices.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windowsphone8\System.Reactive.PlatformServices.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\net40\System.Reactive.Providers.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\portable-net40+sl5+win8+wp8\System.Reactive.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\portable-windows8+net45+wp8\System.Reactive.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\sl5\System.Reactive.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windows8\System.Reactive.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windowsphone71\System.Reactive.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windowsphone8\System.Reactive.PlatformServices.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\net40\System.Reactive.Providers.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\net45\System.Reactive.Providers.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Providers.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Providers.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\sl5\System.Reactive.Providers.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windows8\System.Reactive.Providers.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windowsphone71\System.Reactive.Providers.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windowsphone8\System.Reactive.Providers.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Remoting.2.2.2\lib\net40\System.Reactive.Runtime.Remoting.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Providers.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Providers.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\sl5\System.Reactive.Providers.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windows8\System.Reactive.Providers.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windowsphone71\System.Reactive.Providers.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windowsphone8\System.Reactive.Providers.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Remoting.2.2.2\lib\net40\System.Reactive.Runtime.Remoting.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-Remoting.2.2.2\lib\net45\System.Reactive.Runtime.Remoting.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\net40\Microsoft.Reactive.Testing.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\net45\Microsoft.Reactive.Testing.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\sl5\Microsoft.Reactive.Testing.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windows8\Microsoft.Reactive.Testing.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windowsphone71\Microsoft.Reactive.Testing.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windowsphone8\Microsoft.Reactive.Testing.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-WindowStoreApps.2.2.2\lib\windows8\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-WinForms.2.2.2\lib\net40\System.Reactive.Windows.Forms.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\net40\Microsoft.Reactive.Testing.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\net45\Microsoft.Reactive.Testing.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\sl5\Microsoft.Reactive.Testing.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windows8\Microsoft.Reactive.Testing.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windowsphone71\Microsoft.Reactive.Testing.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windowsphone8\Microsoft.Reactive.Testing.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-WindowStoreApps.2.2.2\lib\windows8\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-WinForms.2.2.2\lib\net40\System.Reactive.Windows.Forms.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-WinForms.2.2.2\lib\net45\System.Reactive.Windows.Forms.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-WinRT.2.2.2\lib\windows8\System.Reactive.WindowsRuntime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-WinRT.2.2.2\lib\windowsphone8\System.Reactive.WindowsRuntime.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\net40\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-WinRT.2.2.2\lib\windowsphone8\System.Reactive.WindowsRuntime.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\net40\System.Reactive.Windows.Threading.dll
 /r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\net45\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\sl5\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windows8\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windowsphone71\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windowsphone8\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net35\System.Reactive.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net4\System.Reactive.dll
-/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net45\System.Reactive.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL3-WP\System.Reactive.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL4\System.Reactive.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL5\System.Reactive.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\WinRT45\System.Reactive.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\Net35\System.Reactive.Windows.Threading.dll
-/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\Net4\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL3-WP\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL4\System.Reactive.Windows.Threading.dll
-#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL5\System.Reactive.Windows.Threading.dll
-/r:D:\Microshaoft.Nuget.Packages\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll
-#D:\Microshaoft.Nuget.Packages\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\sl5\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windows8\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windowsphone71\System.Reactive.Windows.Threading.dll
+# /r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windowsphone8\System.Reactive.Windows.Threading.dll
 /r:D:\Microshaoft.Nuget.Packages\System.IdentityModel.Tokens.Jwt.3.0.2\lib\net45\System.IdentityModel.Tokens.Jwt.dll
 /r:D:\Microshaoft.Nuget.Packages\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.4.5.1\lib\net45\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll
-#/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\de\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\es\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\fr\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\it\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\ja\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\ko\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\ru\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\zh-Hans\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\zh-Hant\System.Spatial.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\System.Spatial.Portable.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\de\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\es\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\fr\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\it\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\ja\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\ko\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\ru\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hans\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hant\System.Spatial.Portable.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\System.Spatial.SL.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\de\System.Spatial.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\es\System.Spatial.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\fr\System.Spatial.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\it\System.Spatial.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\ja\System.Spatial.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\ko\System.Spatial.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\ru\System.Spatial.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\zh-Hans\System.Spatial.SL.resources.dll
-/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\zh-Hant\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\System.Spatial.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\System.Spatial.Portable.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\de\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\es\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\fr\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\it\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\ja\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\ko\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\ru\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\zh-Hans\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\portable-net40+sl5+wp8+win8\zh-Hant\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\de\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\es\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\fr\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\it\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\ja\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\ko\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\ru\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\zh-Hans\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\net40\zh-Hant\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\System.Spatial.SL.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\de\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\es\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\fr\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\it\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\ja\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\ko\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\ru\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\zh-Hans\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.1\lib\sl4\zh-Hant\System.Spatial.SL.resources.dll
 /r:D:\Microshaoft.Nuget.Packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll
 /r:D:\Microshaoft.Nuget.Packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll
 /r:D:\Microshaoft.Nuget.Packages\Unity.3.0.1304.1\lib\NetCore45\Microsoft.Practices.Unity.NetCore.dll
@@ -1460,7 +1497,8 @@
 /r:D:\Microshaoft.Nuget.Packages\Unity.Interception.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll
 /r:D:\Microshaoft.Nuget.Packages\Unity.Interception.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll
 /r:D:\Microshaoft.Nuget.Packages\WebGrease.1.5.2\lib\WebGrease.dll
-/r:D:\Microshaoft.Nuget.Packages\WindowsAzure.Storage.3.0.2.0\lib\net40\Microsoft.WindowsAzure.Storage.dll
+/r:D:\Microshaoft.Nuget.Packages\WindowsAzure.Storage.3.0.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll
+/r:D:\Microshaoft.Nuget.Packages\Zlib.Portable.1.9.2\lib\portable-net4+sl4+wp71+win8\Zlib.Portable.dll
 
 #==========================================
 
