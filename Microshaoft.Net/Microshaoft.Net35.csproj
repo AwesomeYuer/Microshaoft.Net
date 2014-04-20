@@ -137,6 +137,9 @@
   <ItemGroup>
     <None Include="99.csc.rsp\csc.rsp" />
     <None Include="99.NugetBatchInstall\NugetBatchInstall.cmd" />
+    <None Include="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.rsp">
+      <Link>00.Assembly\csc.rsp</Link>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
