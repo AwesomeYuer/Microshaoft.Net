@@ -142,12 +142,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\Nuget\NugetBatchInstall.cmd">
-      <Link>99.NugetBatchInstall\NugetBatchInstall.cmd</Link>
-    </None>
-    <None Include="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.rsp">
-      <Link>99.csc.rsp\csc.rsp</Link>
-    </None>
+    <None Include="99.csc.rsp\csc.rsp" />
+    <None Include="99.NugetBatchInstall\NugetBatchInstall.cmd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

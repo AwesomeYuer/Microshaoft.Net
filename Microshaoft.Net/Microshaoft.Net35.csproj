@@ -135,6 +135,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="99.csc.rsp\csc.rsp" />
+    <None Include="99.NugetBatchInstall\NugetBatchInstall.cmd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
