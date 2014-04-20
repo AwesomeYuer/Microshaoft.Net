@@ -1,0 +1,1473 @@
+# This file contains command-line options that the C#
+# command line compiler (CSC) will process as part
+# of every compilation, unless the "/noconfig" option
+# is specified.
+
+#==========================================
+
+# Reference the common Framework libraries
+/r:Accessibility.dll
+/r:Microsoft.CSharp.dll
+/r:System.Configuration.dll
+/r:System.Configuration.Install.dll
+/r:System.Core.dll
+/r:System.Data.dll
+/r:System.Data.DataSetExtensions.dll
+/r:System.Data.Linq.dll
+/r:System.Data.OracleClient.dll
+/r:System.Deployment.dll
+/r:System.Design.dll
+/r:System.DirectoryServices.dll
+/r:System.dll
+/r:System.Drawing.Design.dll
+/r:System.Drawing.dll
+/r:System.EnterpriseServices.dll
+/r:System.Management.dll
+/r:System.Messaging.dll
+/r:System.Runtime.Remoting.dll
+/r:System.Runtime.Serialization.dll
+/r:System.Runtime.Serialization.Formatters.Soap.dll
+/r:System.Security.dll
+/r:System.ServiceModel.dll
+/r:System.ServiceModel.Web.dll
+/r:System.ServiceProcess.dll
+/r:System.Transactions.dll
+/r:System.Web.dll
+/r:System.Web.Extensions.Design.dll
+/r:System.Web.Extensions.dll
+/r:System.Web.Mobile.dll
+/r:System.Web.RegularExpressions.dll
+/r:System.Web.Services.dll
+/r:System.Windows.Forms.Dll
+/r:System.Workflow.Activities.dll
+/r:System.Workflow.ComponentModel.dll
+/r:System.Workflow.Runtime.dll
+/r:System.Xml.dll
+/r:System.Xml.Linq.dll
+/r:System.Net.Http.dll
+
+#==========================================
+
+# MEF add by Microshaoft
+/r:System.ComponentModel.Composition.dll
+
+#==========================================
+
+# VB add by Microshaoft
+/r:Microsoft.VisualBasic.dll
+
+#==========================================
+
+# wcf add by Microshaoft
+/r:System.ServiceModel.Activation.dll
+
+#==========================================
+
+# WPF add by Microshaoft
+/r:"WPF\PresentationCore.dll"
+/r:"WPF\PresentationFramework.dll"
+/r:"WPF\WindowsBase.dll"
+/r:"System.Xaml.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\System.Windows.Interactivity.dll"
+
+#==========================================
+
+# WWF add by Microshaoft
+/r:System.Activities.dll
+/r:System.ServiceModel.Activities.dll
+
+#==========================================
+
+# WCF add by Microshaoft
+/r:System.Runtime.DurableInstancing.dll
+
+#==========================================
+
+# System.IO.Compression
+# /r:System.IO.Compression.dll
+/r:System.IO.Compression.FileSystem.dll
+
+#==========================================
+
+# OpenXML add by Microshaoft
+#/r:"D:\Microshaoft.Nuget.Packages\OpenXML\OpenXMLSDKV25\Global Assembly Cache Folder\DocumentFormat.OpenXml\2.0.3302.0_31BF3856AD364E35\DocumentFormat.OpenXml.dll"
+/r:D:\Microshaoft.Nuget.Packages\OpenXML\OpenXMLSDKV25\lib\DocumentFormat.OpenXml.dll
+
+#==========================================
+
+# C:\Program Files (x86)\Microsoft.NET\ add by Microshaoft
+/r:"C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll"
+#/r:"C:\Program Files (x86)\Microsoft.NET\ADOMD.NET\110\Microsoft.AnalysisServices.AdomdClient.dll"
+#/r:"C:\Program Files (x86)\Microsoft.NET\ADOMD.NET\110\msadomdx.dll"
+/r:"C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\adodb.dll"
+/r:"C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll"
+/r:"C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\microsoft.msxml.dll"
+/r:"C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.stdformat.dll"
+/r:"C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\msdatasrc.dll"
+/r:"C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\stdole.dll"
+
+#==========================================
+
+# C:\Program Files\Microsoft.NET\ add by Microshaoft
+/r:"C:\Program Files\Microsoft.NET\ADOMD.NET\110\Microsoft.AnalysisServices.AdomdClient.dll"
+
+#==========================================
+
+# C:\Program Files\Reference Assemblies\ add by Microshaoft
+/r:"C:\Program Files\Reference Assemblies\Microsoft\Microsoft Identity Extensions\1.0\Microsoft.IdentityModel.Extensions.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.Common.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.Excel.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.Outlook.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.v4.0.Framework.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.Word.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.Office.Tools.Word.v4.0.Utilities.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.VisualStudio.Tools.Applications.Hosting.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\VSTO40\v4.0.Framework\Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll"
+#/r:"C:\Program Files\Reference Assemblies\Microsoft\Windows Identity Foundation\v3.5\Microsoft.IdentityModel.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\Windows Identity Foundation\v3.5\Microsoft.IdentityModel.WindowsTokenService.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\Windows Identity Foundation\v3.5\en\Microsoft.IdentityModel.resources.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\Windows Identity Foundation\v3.5\en\Microsoft.IdentityModel.WindowsTokenService.resources.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\Workflow Manager\1.0\Microsoft.Activities.Design.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\Workflow Manager\1.0\Microsoft.Activities.Design.Services.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\Workflow Manager\1.0\Microsoft.Activities.dll"
+/r:"C:\Program Files\Reference Assemblies\Microsoft\Workflow Manager\1.0\Microsoft.Workflow.Client.dll"
+
+#==========================================
+
+# C:\Windows\assembly\GAC_MSIL\Office\ add by Microshaoft
+/r:C:\Windows\assembly\GAC_MSIL\Office\15.0.0.0__71e9bce111e9429c\Office.dll
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.InfoPath.Permission\15.0.0.0__71e9bce111e9429c\Microsoft.Office.InfoPath.Permission.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Access\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Access.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Access.Dao\15.0.0.0__71e9bce111e9429c\Microsoft.Office.interop.access.dao.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Graph\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Graph.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.InfoPath\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.InfoPath.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.InfoPath.SemiTrust\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.InfoPath.SemiTrust.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.InfoPath.Xml\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.InfoPath.Xml.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.MSProject\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.MSProject.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.OneNote\12.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.OneNote.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.OneNote\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.OneNote.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Outlook\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Outlook.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.OutlookViewCtl\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.OutlookViewCtl.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.PowerPoint\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.PowerPoint.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Publisher\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Publisher.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.SharePointDesigner\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.SharePointDesigner.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.SharePointDesignerPage\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.SharePointDesignerPage.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.SmartTag\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.SmartTag.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Visio\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Visio.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Visio.SaveAsWeb\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Visio.SaveAsWeb.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.VisOcx\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.VisOcx.dll"
+/r:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Word\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Word.dll"
+
+# /link:C:\Windows\assembly\GAC_MSIL\Office\15.0.0.0__71e9bce111e9429c\Office.dll
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.InfoPath.Permission\15.0.0.0__71e9bce111e9429c\Microsoft.Office.InfoPath.Permission.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Access\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Access.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Access.Dao\15.0.0.0__71e9bce111e9429c\Microsoft.Office.interop.access.dao.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Graph\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Graph.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.InfoPath\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.InfoPath.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.InfoPath.SemiTrust\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.InfoPath.SemiTrust.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.InfoPath.Xml\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.InfoPath.Xml.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.MSProject\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.MSProject.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.OneNote\12.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.OneNote.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.OneNote\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.OneNote.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Outlook\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Outlook.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.OutlookViewCtl\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.OutlookViewCtl.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.PowerPoint\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.PowerPoint.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Publisher\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Publisher.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.SharePointDesigner\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.SharePointDesigner.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.SharePointDesignerPage\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.SharePointDesignerPage.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.SmartTag\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.SmartTag.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Visio\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Visio.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Visio.SaveAsWeb\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Visio.SaveAsWeb.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.VisOcx\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.VisOcx.dll"
+# /link:"C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Word\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Word.dll"
+
+#==========================================
+# C:\Program Files (x86)\Reference Assemblies\ add by Microshaoft
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\Microsoft.CSharp.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\Microsoft.VisualBasic.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\mscorlib.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Collections.Concurrent.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Collections.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ComponentModel.Annotations.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ComponentModel.DataAnnotations.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ComponentModel.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ComponentModel.EventBasedAsync.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Core.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Diagnostics.Contracts.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Diagnostics.Debug.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Diagnostics.Tools.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Diagnostics.Tracing.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Dynamic.Runtime.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Globalization.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.IO.Compression.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.IO.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Linq.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Linq.Expressions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Linq.Parallel.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Linq.Queryable.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Net.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Net.Http.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Net.Http.Rtc.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Net.NetworkInformation.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Net.Primitives.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Net.Requests.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Numerics.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ObjectModel.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Reflection.Context.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Reflection.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Reflection.Extensions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Reflection.Primitives.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Resources.ResourceManager.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.Extensions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.InteropServices.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.InteropServices.WindowsRuntime.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.Numerics.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.Serialization.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.Serialization.Json.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.Serialization.Primitives.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.Serialization.Xml.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.WindowsRuntime.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Runtime.WindowsRuntime.UI.Xaml.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Security.Principal.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ServiceModel.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ServiceModel.Duplex.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ServiceModel.Http.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ServiceModel.NetTcp.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ServiceModel.Primitives.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ServiceModel.Security.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.ServiceModel.Web.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Text.Encoding.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Text.Encoding.Extensions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Text.RegularExpressions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Threading.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Threading.Tasks.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Threading.Tasks.Parallel.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Threading.Timer.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Windows.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Xml.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Xml.Linq.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Xml.ReaderWriter.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Xml.Serialization.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Xml.XDocument.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5.1\System.Xml.XmlSerializer.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Accessibility.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\CustomMarshalers.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\ISymWrapper.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.Activities.Build.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.Build.Conversion.v4.0.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.Build.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.Build.Engine.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.Build.Framework.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.Build.Tasks.v4.0.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.Build.Utilities.v4.0.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.JScript.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.VisualBasic.Compatibility.Data.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.VisualBasic.Compatibility.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.VisualBasic.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.VisualC.Dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.VisualC.STLCLR.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\PresentationBuildTasks.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\PresentationCore.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\PresentationFramework.Aero.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\presentationframework.aero2.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\presentationframework.aerolite.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\PresentationFramework.Classic.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\PresentationFramework.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\PresentationFramework.Luna.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\PresentationFramework.Royale.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\ReachFramework.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\sysglobl.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Activities.Core.Presentation.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Activities.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Activities.DurableInstancing.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Activities.Presentation.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.AddIn.Contract.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.AddIn.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ComponentModel.Composition.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ComponentModel.Composition.registration.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ComponentModel.DataAnnotations.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.configuration.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Configuration.Install.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.DataSetExtensions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.Entity.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.Entity.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.Linq.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.OracleClient.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.Services.Client.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.Services.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.Services.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.SqlXml.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Deployment.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Device.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.DirectoryServices.AccountManagement.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.DirectoryServices.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.DirectoryServices.Protocols.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Drawing.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Drawing.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.EnterpriseServices.dll"
+##/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.EnterpriseServices.Thunk.dll"
+##/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.EnterpriseServices.Wrapper.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.IdentityModel.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.IdentityModel.Selectors.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.identitymodel.services.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.IO.Compression.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.IO.Compression.FileSystem.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.IO.Log.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Management.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Management.Instrumentation.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Messaging.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Net.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Net.Http.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Net.Http.WebRequest.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Numerics.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Printing.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Reflection.Context.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Runtime.Caching.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Runtime.DurableInstancing.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Runtime.Remoting.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Runtime.Serialization.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Runtime.Serialization.Formatters.Soap.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Security.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ServiceModel.Activation.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ServiceModel.Activities.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ServiceModel.Channels.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ServiceModel.Discovery.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ServiceModel.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ServiceModel.Routing.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ServiceModel.Web.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ServiceProcess.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Speech.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Transactions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.Abstractions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.ApplicationServices.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.DataVisualization.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.DataVisualization.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.DynamicData.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.DynamicData.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.Entity.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.Entity.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.Extensions.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.Extensions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.Mobile.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.RegularExpressions.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.Routing.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Web.Services.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Windows.Controls.Ribbon.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Windows.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Windows.Forms.DataVisualization.Design.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Windows.Forms.DataVisualization.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Windows.Forms.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Windows.Input.Manipulations.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Windows.Presentation.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Workflow.Activities.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Workflow.ComponentModel.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Workflow.Runtime.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.WorkflowServices.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Xaml.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.XML.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Xml.Linq.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Xml.Serialization.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\UIAutomationClient.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\UIAutomationClientsideProviders.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\UIAutomationProvider.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\UIAutomationTypes.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\WindowsBase.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\WindowsFormsIntegration.dll"
+#/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\XamlBuildTask.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Collections.Concurrent.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Collections.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ComponentModel.Annotations.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ComponentModel.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ComponentModel.EventBasedAsync.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Diagnostics.Contracts.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Diagnostics.Debug.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Diagnostics.Tools.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Diagnostics.Tracing.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Dynamic.Runtime.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Globalization.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.IO.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.Expressions.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.Parallel.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.Queryable.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Net.NetworkInformation.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Net.Primitives.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Net.Requests.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ObjectModel.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Reflection.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Reflection.Emit.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Reflection.Emit.ILGeneration.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Reflection.Emit.Lightweight.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Reflection.Extensions.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Reflection.Primitives.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Resources.ResourceManager.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.Extensions.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.InteropServices.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.InteropServices.WindowsRuntime.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.Numerics.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.Serialization.Json.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.Serialization.Primitives.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.Serialization.Xml.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Security.Principal.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ServiceModel.Duplex.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ServiceModel.Http.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ServiceModel.NetTcp.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ServiceModel.Primitives.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.ServiceModel.Security.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Text.Encoding.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Text.Encoding.Extensions.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Text.RegularExpressions.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Threading.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Threading.Tasks.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Threading.Tasks.Parallel.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Threading.Timer.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Xml.ReaderWriter.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Xml.XDocument.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Xml.XmlSerializer.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MMC\v3.0\Microsoft.ManagementConsole.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MMC\v3.0\MMCFxCommon.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MOData\3.0\Microsoft.Management.OData.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MSBuild\v12.0\Microsoft.Build.Conversion.v12.0.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MSBuild\v12.0\Microsoft.Build.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MSBuild\v12.0\Microsoft.Build.Engine.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MSBuild\v12.0\Microsoft.Build.Framework.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MSBuild\v12.0\Microsoft.Build.Tasks.v12.0.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\MSBuild\v12.0\Microsoft.Build.Utilities.v12.0.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\VSTA30\v10.0\Microsoft.VisualStudio.Tools.Applications.ProgrammingModel.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Activities.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Commands.Management.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Commands.Utility.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.ConsoleHost.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Core.Activities.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Diagnostics.Activities.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Management.Activities.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.ScheduledJob.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Security.Activities.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Security.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Utility.Activities.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.PowerShell.Workflow.ServiceCore.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\Microsoft.WSMan.Management.Activities.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\System.Management.Automation.dll"
+/r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\WMI\v1.0\Microsoft.Management.Infrastructure.dll"
+
+#==========================================
+
+# "C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\ add by Microshaoft
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Microsoft.Expression.Controls.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Microsoft.Expression.Drawing.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Microsoft.Expression.Effects.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Microsoft.Expression.Interactions.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Microsoft.Expression.Prototyping.Interactivity.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Microsoft.Expression.Prototyping.SketchControls.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\System.Windows.Interactivity.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\Microsoft.Expression.Controls.Design.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\Microsoft.Expression.Drawing.Design.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\Microsoft.Expression.Effects.Design.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\Microsoft.Expression.Prototyping.SketchControls.design.v4.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\en\Microsoft.Expression.Controls.Design.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\en\Microsoft.Expression.Drawing.Design.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\en\Microsoft.Expression.Effects.Design.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\zh-Hans\Microsoft.Expression.Controls.Design.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\zh-Hans\Microsoft.Expression.Drawing.Design.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\zh-Hans\Microsoft.Expression.Effects.Design.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\zh-Hant\Microsoft.Expression.Controls.Design.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\zh-Hant\Microsoft.Expression.Drawing.Design.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\Design\zh-Hant\Microsoft.Expression.Effects.Design.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\en\Microsoft.Expression.Interactions.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\en\Microsoft.Expression.Prototyping.Interactivity.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\en\System.Windows.Interactivity.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hans\Microsoft.Expression.Controls.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hans\Microsoft.Expression.Drawing.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hans\Microsoft.Expression.Effects.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hans\Microsoft.Expression.Interactions.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hans\Microsoft.Expression.Prototyping.Interactivity.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hans\System.Windows.Interactivity.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hant\Microsoft.Expression.Controls.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hant\Microsoft.Expression.Drawing.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hant\Microsoft.Expression.Effects.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hant\Microsoft.Expression.Interactions.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hant\Microsoft.Expression.Prototyping.Interactivity.resources.dll"
+#/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\zh-Hant\System.Windows.Interactivity.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Prototyping\Libraries\Microsoft.Expression.Prototyping.Runtime.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Prototyping\Libraries\en\Microsoft.Expression.Prototyping.Runtime.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Prototyping\Libraries\zh-Hans\Microsoft.Expression.Prototyping.Runtime.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Prototyping\Libraries\zh-Hant\Microsoft.Expression.Prototyping.Runtime.resources.dll"
+/r:"C:\Program Files (x86)\Microsoft SDKs\Expression\Extensions\FXG\Libraries\.NETFramework\v4.0\Microsoft.Expression.Controls.Fxg.dll"
+
+#==========================================
+
+# C:\Program Files\Common Files\microsoft shared\ add by Microshaoft
+#/r:"C:\Program Files\Common Files\microsoft shared\Visual Studio\12.0\Newtonsoft.Json.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Visual Studio\12.0\System.Net.Http.Formatting.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VS7DEBUG\Program Files\Reference Assemblies\Microsoft\VSTA30\v11.0\.NET2.0\Microsoft.VisualStudio.Tools.Applications.Adapter.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VS7DEBUG\Program Files\Reference Assemblies\Microsoft\VSTA30\v11.0\.NET2.0\Microsoft.VisualStudio.Tools.Applications.Contract.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VS7DEBUG\Program Files\Reference Assemblies\Microsoft\VSTA30\v11.0\.NET2.0\System.AddIn.Contract.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VS7DEBUG\Program Files\Reference Assemblies\Microsoft\VSTA30\v11.0\.NET2.0\System.AddIn.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VSTA\10.0\Bin\Microsoft.VisualStudio.Tools.Applications.Common.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VSTA\10.0\Bin\Microsoft.VisualStudio.Tools.Applications.Core.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VSTA\10.0\Bin\Microsoft.VisualStudio.Tools.Applications.IdeCommunications.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VSTA\10.0\Bin\Microsoft.VisualStudio.Tools.Applications.MSBuildRuntime.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VSTA\10.0\Bin\Microsoft.VisualStudio.Tools.Applications.Utilities.Common.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VSTA\10.0\Bin\Microsoft.VisualStudio.Tools.Applications.Utilities.ProjectUpgradeService.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\VSTA\10.0\Bin\Microsoft.VisualStudio.Tools.Applications.Utilities.VstaTemplate.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\Client\MSOIDCLIL.DLL"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\Client\MSOIDRES.DLL"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.Office.Client.Education.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.Office.Client.Policy.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.Office.Client.TranslationServices.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.DocumentManagement.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Publishing.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Search.Applications.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Search.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.UserProfiles.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.WorkflowServices.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.Office.Client.Policy.Silverlight.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.Office.Client.TranslationServices.Silverlight.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.DocumentManagement.Silverlight.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.Publishing.Silverlight.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.Search.Applications.Silverlight.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.Search.Silverlight.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.Silverlight.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.Silverlight.Runtime.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.Taxonomy.Silverlight.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.UserProfiles.Phone.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ClientBin\Microsoft.SharePoint.Client.WorkflowServices.Silverlight.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\WorkflowActivities\Microsoft.SharePoint.WorkflowServices.Activities.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\DundasWebChart.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\MDXQueryGenerator.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.AnalysisServices.Modeling.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.Alerting.Runtime.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.Alerting.ServiceRuntime.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.Authorization.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.ChartWebControl.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.ComponentLibrary.Engine.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.DataExtensions.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.DataExtensions.Essbase.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.DataExtensions.SapBw.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.DataExtensions.XmlaClient.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.DataFeedClient.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.DataRendering.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.DataSegmentRendering.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.Diagnostics.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.ExcelRendering.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.GaugeWebControl.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.HPBProcessing.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.HtmlRendering.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.ImageRendering.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.Interfaces.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.Modeling.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.NullRendering.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.ProcessingCore.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.ProcessingObjectModel.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.RdlObjectModel.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.RichText.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.RPLObjectModel.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.RPLRendering.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.RsClient.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.RSSPMemMonitor.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.SapBwMDXQueryGenerator.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.SemanticQueryEngine.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.ServiceRuntime.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.SharePoint.ObjectModel.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.SharePoint.Server.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.SharePoint12.Server.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.SharePoint14.Server.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.SPBProcessing.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.UpgradeScripts.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.UsageTracking.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.WebMap.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\Microsoft.ReportingServices.WordRendering.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesAppDomainManager.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesCDOInterop.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesCompression.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesEmailDeliveryProvider.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesFileShareDeliveryProvider.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesLibrary.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesNativeClient.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesNullDeliveryProvider.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesRenderingNative.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesSharePointDeliveryExtension.dll"
+/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ReportingServicesWebServer.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\RSHttpRuntime.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\RSSPMemMonNative.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\SQLRSSPOS.dll"
+
+#==========================================
+
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\de\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\es\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\fr\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\it\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ja\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ko\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\pt\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\ru\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHS\ReportingServicesWebServer.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\MDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.AnalysisServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.Alerting.Runtime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.Alerting.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.ChartWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.ComponentLibrary.Engine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.DataExtensions.Essbase.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.DataExtensions.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.DataExtensions.SapBw.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.DataExtensions.XmlaClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.DataFeedClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.DataRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.DataSegmentRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.Diagnostics.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.EssbaseMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.ExcelRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.GaugeWebControl.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.HPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.HtmlRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.ImageRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.Modeling.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.NullRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.ProcessingCore.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.RichText.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.RPLRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.RsClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.SapBwMDXQueryGenerator.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.SemanticQueryEngine.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.ServiceRuntime.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.SharePoint.Server.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.SPBProcessing.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.WebMap.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\Microsoft.ReportingServices.WordRendering.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\ReportingServicesEmailDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\ReportingServicesFileShareDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\ReportingServicesLibrary.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\ReportingServicesNativeClient.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\ReportingServicesNullDeliveryProvider.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\ReportingServicesSharePointDeliveryExtension.resources.dll"
+# 不常用 : /r:"C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\WebServices\Reporting\bin\zh-CHT\ReportingServicesWebServer.resources.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\WF\WDE.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\WF\amd64\WDE.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Windows Simulator\11.0\Microsoft.Windows.Simulator.UtilitiesElevated.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Windows Simulator\11.0\SensorsSimulatorDriver.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Windows Simulator\12.0\Microsoft.Windows.Simulator.UtilitiesElevated.dll"
+#/r:"C:\Program Files\Common Files\microsoft shared\Windows Simulator\12.0\SensorsSimulatorDriver.dll"
+
+#==========================================
+
+# 以下为常用的 Nuget 引用,注意引用正确路径!
+/r:D:\Microshaoft.Nuget.Packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\net35-client\Microsoft.Contracts.dll
+/r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\net40-client\DELETE_ME.dll
+#/r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\sl3-wp\Microsoft.Contracts.dll
+/r:D:\Microshaoft.Nuget.Packages\CodeContracts.Unofficial.1.0.0.2\lib\sl4\Microsoft.Contracts.dll
+/r:D:\Microshaoft.Nuget.Packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll
+#/r:D:\Microshaoft.Nuget.Packages\CommonServiceLocator.1.0\lib\SL30\Microsoft.Practices.ServiceLocation.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll
+/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll
+/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OAuth.Consumer.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll
+/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OAuth.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll
+/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OpenId.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\Mono.Math.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net35-full\Org.Mentalis.Security.Cryptography.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\Mono.Math.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\Org.Mentalis.Security.Cryptography.dll
+/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll
+/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\Mono.Math.dll
+/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\Org.Mentalis.Security.Cryptography.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net35-full\DotNetOpenAuth.OpenId.RelyingParty.dll
+#/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll
+/r:D:\Microshaoft.Nuget.Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Data.SqlCe.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.ExceptionHandling.WCF.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.PolicyInjection.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.1.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.Database.1.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Database.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.SemanticLogging.WindowsAzure.1.0.1304.1\lib\NET45\Microsoft.Practices.EnterpriseLibrary.SemanticLogging.WindowsAzure.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.1\lib\NET45\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Validation.Integration.AspNet.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Validation.Integration.WCF.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Validation.Integration.WinForms.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll
+/r:D:\Microshaoft.Nuget.Packages\EnterpriseLibrary.Validation.Integration.WPF.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WPF.dll
+#/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\lib\net40\EntityFramework.dll
+#/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\lib\net40\EntityFramework.SqlServer.dll
+/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll
+/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll
+/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\tools\EntityFramework.PowerShell.dll
+/r:D:\Microshaoft.Nuget.Packages\EntityFramework.6.0.2\tools\EntityFramework.PowerShell.Utility.dll
+#/r:D:\Microshaoft.Nuget.Packages\Ix-Async.1.2.2\lib\net40\System.Interactive.Async.dll
+/r:D:\Microshaoft.Nuget.Packages\Ix-Async.1.2.2\lib\net45\System.Interactive.Async.dll
+#/r:D:\Microshaoft.Nuget.Packages\Ix-Async.1.2.2\lib\portable-windows8+net45+wp8\System.Interactive.Async.dll
+#/r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\net40\System.Interactive.dll
+/r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\net45\System.Interactive.dll
+#/r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\portable-windows8+net45+wp8\System.Interactive.dll
+#/r:D:\Microshaoft.Nuget.Packages\Ix-Main.1.2.2\lib\sl5\System.Interactive.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Cors.5.1.1\lib\net45\System.Web.Cors.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.2\lib\net40\Microsoft.AspNet.SignalR.Client.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.2\lib\net45\Microsoft.AspNet.SignalR.Client.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Client.2.0.2\lib\portable-net45+sl5+netcore45+wp8\Microsoft.AspNet.SignalR.Client.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Core.2.0.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Owin.1.2.0\lib\net40\Microsoft.AspNet.SignalR.Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.Owin.1.2.0\lib\net45\Microsoft.AspNet.SignalR.Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.SignalR.SystemWeb.2.0.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Client.5.1.1\lib\net45\System.Net.Http.Formatting.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Client.5.1.1\lib\portable-wp8+netcore45+net45\System.Net.Http.Formatting.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Core.5.1.1\lib\net45\System.Web.Http.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Cors.5.1.1\lib\net45\System.Web.Http.Cors.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Owin.5.1.1\lib\net45\System.Web.Http.Owin.dll
+/r:"D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.SelfHost.5.1.1\lib\net45\System.Web.Http.SelfHost.dll"
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.Tracing.5.1.1\lib\net45\System.Web.Http.Tracing.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebApi.WebHost.5.1.1\lib\net45\System.Web.Http.WebHost.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.Data.3.1.1\lib\net45\WebMatrix.Data.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.OAuth.3.1.1\lib\net45\Microsoft.Web.WebPages.OAuth.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.AspNet.WebPages.WebData.3.1.1\lib\net45\WebMatrix.WebData.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\net40\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\net40\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\net40\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp8\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp8\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp8\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl5+win8+wp8\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl5+win8+wp8\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl5+win8+wp8\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8+wp8\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8+wp8\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\portable-net40+win8+wp8\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4-windowsphone71\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4-windowsphone71\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl4-windowsphone71\System.Threading.Tasks.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl5\System.IO.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl5\System.Runtime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.1.1.3\lib\sl5\System.Threading.Tasks.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.Tasks.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\native\ARM\ClrCompression.dll
+# /r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\native\x86\ClrCompression.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\portable-net45+win8+wp8\System.IO.Compression.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\portable-net45+wp8\System.IO.Compression.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Compression.3.9.73\lib\wp8\System.IO.Compression.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Bcl.Immutable.1.0.30\lib\portable-net45+win8+wp8\System.Collections.Immutable.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.AttributedModel.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Convention.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Hosting.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Runtime.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.TypedParts.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\de\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\es\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\fr\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\it\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\ja\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\ko\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\ru\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\zh-Hans\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\net40\zh-Hant\Microsoft.Data.Edm.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\Microsoft.Data.Edm.Portable.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\de\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\es\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\fr\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\it\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\ja\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\ko\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\ru\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hans\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hant\Microsoft.Data.Edm.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\Microsoft.Data.Edm.SL.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\de\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\es\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\fr\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\it\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\ja\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\ko\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\ru\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\zh-Hans\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Edm.5.6.0\lib\sl4\zh-Hant\Microsoft.Data.Edm.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\de\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\es\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\fr\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\it\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\ja\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\ko\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\ru\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\zh-Hans\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\net40\zh-Hant\Microsoft.Data.OData.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\Microsoft.Data.OData.Portable.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\de\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\es\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\fr\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\it\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\ja\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\ko\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\ru\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hans\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hant\Microsoft.Data.OData.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\Microsoft.Data.OData.SL.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\de\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\es\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\fr\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\it\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\ja\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\ko\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\ru\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\zh-Hans\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.OData.5.6.0\lib\sl4\zh-Hant\Microsoft.Data.OData.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\Microsoft.Data.Services.Client.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\de\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\es\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\fr\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\it\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ja\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ko\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\ru\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\Microsoft.Data.Services.Client.Portable.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\de\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\es\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\fr\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\it\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\ja\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\ko\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\ru\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\zh-Hans\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\portable-net45+sl5+wp8+win8\zh-Hant\Microsoft.Data.Services.Client.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\Microsoft.Data.Services.Client.SL.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\de\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\es\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\fr\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\it\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\ja\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\ko\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\ru\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\zh-Hans\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Data.Services.Client.5.6.0\lib\sl4\zh-Hant\Microsoft.Data.Services.Client.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.0.0\lib\net40\Microsoft.Hadoop.Client.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.0.0\lib\net40\Microsoft.HDInsight.Threading.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.0.0\lib\net40\Microsoft.WindowsAzure.Management.HDInsight.Framework.Core.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Hadoop.Client.1.1.0.0\lib\net40\Microsoft.WindowsAzure.Management.HDInsight.Framework.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.2\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.2\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.Extensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.Primitives.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.WebRequest.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net45\System.Net.Http.Extensions.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\net45\System.Net.Http.Primitives.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Extensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Primitives.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net45+win8\System.Net.Http.Extensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\portable-net45+win8\System.Net.Http.Primitives.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\sl4-windowsphone71\System.Net.Http.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\win8\System.Net.Http.Extensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Net.Http.2.2.13\lib\win8\System.Net.Http.Primitives.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.2.1.0\lib\net40\Microsoft.Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll
+/r:"D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Cors.2.1.0\lib\net45\Microsoft.Owin.Cors.dll"
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Diagnostics.2.1.0\lib\net40\Microsoft.Owin.Diagnostics.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.FileSystems.2.1.0\lib\net40\Microsoft.Owin.FileSystems.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.HttpListener.2.1.0\lib\net40\Microsoft.Owin.Host.HttpListener.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.HttpListener.2.1.0\lib\net45\Microsoft.Owin.Host.HttpListener.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net40\Microsoft.Owin.Host.SystemWeb.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Hosting.2.1.0\lib\net40\Microsoft.Owin.Hosting.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Hosting.2.1.0\lib\net45\Microsoft.Owin.Hosting.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.Jwt.2.1.0\lib\net45\Microsoft.Owin.Security.Jwt.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.StaticFiles.2.1.0\lib\net40\Microsoft.Owin.StaticFiles.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.StaticFiles.2.1.0\lib\net45\Microsoft.Owin.StaticFiles.dll
+#/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Testing.2.1.0\lib\net40\Microsoft.Owin.Testing.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Owin.Testing.2.1.0\lib\net45\Microsoft.Owin.Testing.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Tpl.Dataflow.4.5.14\lib\portable-net45+win8\System.Threading.Tasks.Dataflow.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll
+/r:D:\Microshaoft.Nuget.Packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll
+#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\net20\Newtonsoft.Json.dll
+#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\net35\Newtonsoft.Json.dll
+#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll
+#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll
+#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\sl3-wp\Newtonsoft.Json.dll
+#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\sl4\Newtonsoft.Json.dll
+#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\sl4-windowsphone71\Newtonsoft.Json.dll
+#D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll
+#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\net20\Newtonsoft.Json.dll
+#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\net35\Newtonsoft.Json.dll
+#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll
+/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll
+#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\netcore45\Newtonsoft.Json.dll
+#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll
+#/r:D:\Microshaoft.Nuget.Packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll
+/r:D:\Microshaoft.Nuget.Packages\Owin.1.0\lib\net40\Owin.dll
+#/r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.dll
+#/r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.Host.HttpListener.dll
+#/r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Microsoft.Owin.Hosting.dll
+#/r:D:\Microshaoft.Nuget.Packages\OwinHost.2.1.0\tools\Owin.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\NET40\Microsoft.Expression.Interactions.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.Interactivity.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\NET40\System.Windows.Interactivity.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL4\Microsoft.Expression.Interactions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL4\Microsoft.Practices.Prism.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL4\Microsoft.Practices.Prism.Interactivity.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL4\System.Windows.Interactivity.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL5\Microsoft.Expression.Interactions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.Interactivity.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.4.1.0.0\lib\SL5\System.Windows.Interactivity.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.MEFExtensions.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.MefExtensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.MEFExtensions.4.1.0.0\lib\SL4\Microsoft.Practices.Prism.MefExtensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.MEFExtensions.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.MefExtensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Expression.Interactions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Practices.Prism.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\Microsoft.Practices.Prism.Interactivity.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.Phone.4.1.0.0\lib\SL4-WP71\System.Windows.Interactivity.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.PubSubEvents.1.0.0\lib\portable-sl4+wp7+windows8+net40\Microsoft.Practices.Prism.PubSubEvents.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.StoreApps.1.1.0\lib\windows8\Microsoft.Practices.Prism.StoreApps.dll
+/r:D:\Microshaoft.Nuget.Packages\Prism.UnityExtensions.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.UnityExtensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.UnityExtensions.4.1.0.0\lib\SL4\Microsoft.Practices.Prism.UnityExtensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Prism.UnityExtensions.4.1.0.0\lib\SL5\Microsoft.Practices.Prism.UnityExtensions.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\net40\System.Reactive.Core.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\net45\System.Reactive.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\sl5\System.Reactive.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windows8\System.Reactive.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windowsphone71\System.Reactive.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Core.2.2.2\lib\windowsphone8\System.Reactive.Core.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\net40\System.Reactive.Experimental.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\net45\System.Reactive.Experimental.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Experimental.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Experimental.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\sl5\System.Reactive.Experimental.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windows8\System.Reactive.Experimental.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windowsphone71\System.Reactive.Experimental.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Experimental.2.2.2\lib\windowsphone8\System.Reactive.Experimental.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\net40\System.Reactive.Interfaces.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\net45\System.Reactive.Interfaces.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Interfaces.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Interfaces.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\sl5\System.Reactive.Interfaces.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windows8\System.Reactive.Interfaces.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windowsphone71\System.Reactive.Interfaces.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Interfaces.2.2.2\lib\windowsphone8\System.Reactive.Interfaces.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\net40\System.Reactive.Linq.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\net45\System.Reactive.Linq.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Linq.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Linq.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\sl5\System.Reactive.Linq.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windows8\System.Reactive.Linq.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windowsphone71\System.Reactive.Linq.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Linq.2.2.2\lib\windowsphone8\System.Reactive.Linq.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\net40\System.Reactive.PlatformServices.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\net45\System.Reactive.PlatformServices.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\portable-net40+sl5+win8+wp8\System.Reactive.PlatformServices.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\portable-windows8+net45+wp8\System.Reactive.PlatformServices.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\sl5\System.Reactive.PlatformServices.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windows8\System.Reactive.PlatformServices.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windowsphone71\System.Reactive.PlatformServices.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-PlatformServices.2.2.3\lib\windowsphone8\System.Reactive.PlatformServices.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\net40\System.Reactive.Providers.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\net45\System.Reactive.Providers.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\portable-net40+sl5+win8+wp8\System.Reactive.Providers.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\portable-windows8+net45+wp8\System.Reactive.Providers.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\sl5\System.Reactive.Providers.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windows8\System.Reactive.Providers.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windowsphone71\System.Reactive.Providers.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Providers.2.2.2\lib\windowsphone8\System.Reactive.Providers.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Remoting.2.2.2\lib\net40\System.Reactive.Runtime.Remoting.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-Remoting.2.2.2\lib\net45\System.Reactive.Runtime.Remoting.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\net40\Microsoft.Reactive.Testing.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\net45\Microsoft.Reactive.Testing.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\sl5\Microsoft.Reactive.Testing.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windows8\Microsoft.Reactive.Testing.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windowsphone71\Microsoft.Reactive.Testing.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Testing.2.2.2\lib\windowsphone8\Microsoft.Reactive.Testing.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-WindowStoreApps.2.2.2\lib\windows8\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-WinForms.2.2.2\lib\net40\System.Reactive.Windows.Forms.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-WinForms.2.2.2\lib\net45\System.Reactive.Windows.Forms.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-WinRT.2.2.2\lib\windows8\System.Reactive.WindowsRuntime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-WinRT.2.2.2\lib\windowsphone8\System.Reactive.WindowsRuntime.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\net40\System.Reactive.Windows.Threading.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\net45\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\sl5\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windows8\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windowsphone71\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx-Xaml.2.2.2\lib\windowsphone8\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net35\System.Reactive.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net4\System.Reactive.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\Net45\System.Reactive.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL3-WP\System.Reactive.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL4\System.Reactive.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\SL5\System.Reactive.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Main.1.1.11111\lib\WinRT45\System.Reactive.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\Net35\System.Reactive.Windows.Threading.dll
+/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\Net4\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL3-WP\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL4\System.Reactive.Windows.Threading.dll
+#/r:D:\Microshaoft.Nuget.Packages\Rx_Experimental-Xaml.1.1.11111\lib\SL5\System.Reactive.Windows.Threading.dll
+/r:D:\Microshaoft.Nuget.Packages\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll
+#D:\Microshaoft.Nuget.Packages\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll
+/r:D:\Microshaoft.Nuget.Packages\System.IdentityModel.Tokens.Jwt.3.0.2\lib\net45\System.IdentityModel.Tokens.Jwt.dll
+/r:D:\Microshaoft.Nuget.Packages\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.4.5.1\lib\net45\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll
+#/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\de\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\es\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\fr\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\it\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\ja\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\ko\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\ru\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\zh-Hans\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\net40\zh-Hant\System.Spatial.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\System.Spatial.Portable.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\de\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\es\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\fr\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\it\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\ja\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\ko\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\ru\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hans\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\portable-net40+sl5+wp8+win8\zh-Hant\System.Spatial.Portable.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\System.Spatial.SL.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\de\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\es\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\fr\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\it\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\ja\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\ko\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\ru\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\zh-Hans\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\System.Spatial.5.6.0\lib\sl4\zh-Hant\System.Spatial.SL.resources.dll
+/r:D:\Microshaoft.Nuget.Packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll
+/r:D:\Microshaoft.Nuget.Packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll
+/r:D:\Microshaoft.Nuget.Packages\Unity.3.0.1304.1\lib\NetCore45\Microsoft.Practices.Unity.NetCore.dll
+/r:D:\Microshaoft.Nuget.Packages\Unity.3.0.1304.1\lib\wp8\Microsoft.Practices.Unity.WindowsPhone.dll
+/r:D:\Microshaoft.Nuget.Packages\Unity.Interception.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll
+/r:D:\Microshaoft.Nuget.Packages\Unity.Interception.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll
+/r:D:\Microshaoft.Nuget.Packages\WebGrease.1.5.2\lib\WebGrease.dll
+/r:D:\Microshaoft.Nuget.Packages\WindowsAzure.Storage.3.0.2.0\lib\net40\Microsoft.WindowsAzure.Storage.dll
+
+#==========================================
+
+# Redis add by Microshaoft
+#/r:D:\Redis\dotNET\ServiceStack.Common.dll
+#/r:D:\Redis\dotNET\ServiceStack.dll
+#/r:D:\Redis\dotNET\ServiceStack.Interfaces.dll
+#/r:D:\Redis\dotNET\ServiceStack.OrmLite.dll
+#/r:D:\Redis\dotNET\ServiceStack.OrmLite.SqlServer.dll
+#/r:D:\Redis\dotNET\ServiceStack.Redis.dll
