@@ -141,7 +141,14 @@
     <Compile Include="99.Net35\WriteableTuple.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Nuget\NugetBatchInstall.cmd">
+      <Link>99.NugetBatchInstall\NugetBatchInstall.cmd</Link>
+    </None>
+    <None Include="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.rsp">
+      <Link>99.csc.rsp\csc.rsp</Link>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
