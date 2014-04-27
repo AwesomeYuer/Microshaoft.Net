@@ -13,96 +13,97 @@
     {
         static void Main(string[] args)
         {
-            var xml = @"<a>asdsad</a>";
-            var json = JsonHelper.XmlToJson(xml);
-            Console.WriteLine(json);
-            ProcessOnce();
+           
             Console.WriteLine("End ...");
             Console.ReadLine();
         }
-        static void ProcessOnce()
+       
+    }
+}
+namespace Microshaoft.Share
+{
+    using System;
+    using Newtonsoft.Json;
+    public interface IMessage
+    {
+        MessageHeader Header { get; set; }
+        Func<string, IMessage> GetInstanceCreatorByJson();
+        Func<IMessage> InstanceGetter { get; }
+    }
+    public class MessageHeader
+    {
+        // 消息主题
+        [JsonProperty(PropertyName = "T")]
+        public string Topic;
+        // 原始请求主题
+        [JsonProperty(PropertyName = "RT")]
+        public string RequestTopic;
+
+        [JsonProperty(PropertyName = "SEQ")]
+        public long? Sequence;
+
+        [JsonProperty(PropertyName = "RSEQ")]
+        public long? RequestSequence;
+
+        // 消息号
+        [JsonProperty(PropertyName = "I")]
+        public long? ID;
+
+
+        // 关联消息号
+        [JsonProperty(PropertyName = "L")]
+        public long? LinkID;
+        // Require Response
+        [JsonProperty(PropertyName = "RR")]
+        public int? RequireResponse;
+        // 发送方
+        [JsonProperty(PropertyName = "S")]
+        public Party Sender;
+        // 接收方
+        [JsonProperty(PropertyName = "R")]
+        public Party[] Receivers;
+        // 发送时间戳
+        [JsonProperty(PropertyName = "ST")]
+        public DateTime? SendTimeStamp;
+        // 过期时间戳
+        [JsonProperty(PropertyName = "ET")]
+        public DateTime? ExpireTime;
+        // 次数
+        [JsonProperty(PropertyName = "SC")]
+        public int? SendCount;
+        // Result
+        [JsonProperty(PropertyName = "RV")]
+        public int? ResultValue;
+
+    }
+    public class Party
+    {
+        //AppID
+        [JsonProperty(PropertyName = "A")]
+        public string AppID = "*";
+        //部门机构ID
+        [JsonProperty(PropertyName = "G")]
+        public string GroupID = "*";
+        //UserID
+        [JsonProperty(PropertyName = "U")]
+        public string UserID = "*";
+        [JsonIgnore]
+        public string ID
         {
-            var party = new Party()
+            get
             {
-                PartyID = "clientID"
-                 ,
-                PartyInstanceID = "userID"
-            };
-            var loginRequestMessage = new LoginRequest()
-            {
-                Header = new MessageHeader()
-                {
-                    From = party
-                    ,
-                    To = new Party[] 
-					{
-						party
-						, new Party()
-						{
-							 PartyID = "1111111111"
-							 ,
-							 PartyInstanceID = "1111111-111111111"
-						}
-					}
-                    ,
-                    RequireResponse = 1
-                    ,
-                    SendTimeStamp = DateTime.Now
-                    ,
-                    Topic = "LoginRequest"
-                    ,
-                    Count = 1
-                    ,
-                    ID = Guid.NewGuid().ToString("N")
-                    ,
-                    LinkID = null
-                    ,
-                    Result = null
-                }
-                ,
-                Body = new LoginRequestBody()
-                {
-                    Password = "password"
-                }
-            };
-            Console.WriteLine("Json 序列化");
-            var json = JsonHelper.Serialize(loginRequestMessage);
-            Console.WriteLine(json);
-            Console.WriteLine("Json 反序列化");
-            var path = "H";
-            var messageHeader = JsonHelper.DeserializeByJTokenPath<MessageHeader>(json, path);
-            Console.WriteLine("JTokenPath: {0}, MessageHeader.Topic::Value: {1}", path, messageHeader.Topic);
-            path = "B";
-            var loginRequestBody = JsonHelper.DeserializeByJTokenPath<LoginRequestBody>(json, path);
-            Console.WriteLine("JTokenPath: {0}, LoginRequestBody.Password::Value: {1}", path, loginRequestBody.Password);
-            path = "H.To[1]";
-            var party1 = JsonHelper.DeserializeByJTokenPath<Party>(json, path);
-            Console.WriteLine("JTokenPath: {0}, Party.PartyID::Value: {1}", path, party1.PartyID);
-            path = "";
-            var loginRequest = JsonHelper.DeserializeByJTokenPath<LoginRequest>(json, path);
-            Console.WriteLine("JTokenPath: {0}, LoginRequest.Header.ID::Value: {1}", path, loginRequest.Header.ID);
-            Console.WriteLine("JTokenPath: {0}, LoginRequest.Body.Password::Value: {1}", path, loginRequest.Body.Password);
-
-
-            JsonHelper.ReadJsonPathsValuesAsStrings
+                return
+                    string.Format
                             (
-                                json
-                                , new string[] { "H" }
-                                , (x, y) =>
-                                    {
-                                        Console.WriteLine(x);
-                                        return false;
-
-                                    }
-                            );
-
-
-
-            var xml = JsonHelper.JsonToXml(json);
-            Console.WriteLine(xml);
-            json = JsonHelper.XmlToJson(xml);
-            Console.WriteLine(json);
-            Console.ReadLine();
+                                "{1}{0}{2}{0}{3}"
+                                , "-"
+                                , AppID.ToLower().Trim()
+                                , GroupID.ToLower().Trim()
+                                , UserID.ToLower().Trim()
+                            )
+                            .ToLower()
+                                .Trim();
+            }
         }
     }
 }

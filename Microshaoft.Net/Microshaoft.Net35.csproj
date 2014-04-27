@@ -113,6 +113,8 @@
     <Compile Include="12.ExtensionsMethods\ExtensionsMethodsManager.cs" />
     <Compile Include="12.FTP\FtpWebRequestResponseHelper.cs" />
     <Compile Include="13.FileProcess\FileReadLineHelper.cs" />
+    <Content Include="20.DataAccess\Pager.StoreProcedure.Sample.sql" />
+    <Compile Include="20.DataAccess\SqlCommandExtensionsMethodsManager.cs" />
     <Compile Include="20.DataTable\DataTableColumnDefinitionAttribute.cs" />
     <Compile Include="20.DataTable\DataTableHelper.cs" />
     <Compile Include="20.DataTable\DataTableList.ExtensionMethodsManager.cs" />

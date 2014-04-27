@@ -12,28 +12,41 @@
                 _timer.Start();
             }
         }
+        public void Stop()
+        {
+            if (_timer != null)
+            {
+                _timer.Stop();
+            }
+        }
         private int _intervalSeconds;
         public EasyTimer
                     (
                         int intervalSeconds
-                        , int times
-                        , Action timerAction = null
-                        , bool autoStart = true            
-                        , Action<Exception> exceptionAction = null
-                        
+                        , int times         //action 耗时倍数
+                        , Action timerProcessAction = null
+                        , bool autoStart = true
+                        , bool skipFirstTimerProcessAction = true
+                        , Func<EasyTimer, Exception, bool> onCaughtExceptionProcessFunc = null
+
                     )
         {
-            if (timerAction == null)
+            if (timerProcessAction == null)
             {
                 return;
             }
             _intervalSeconds = intervalSeconds * 1000;
-            _timer = new Timer(100);
+            //first 主线程
+            if (!skipFirstTimerProcessAction)
+            {
+                TimerProcessAction(times, timerProcessAction, onCaughtExceptionProcessFunc);
+            }
+            _timer = new Timer(_intervalSeconds);
             _timer.Elapsed += new ElapsedEventHandler
                                         (
                                             (x, y) =>
                                             {
-                                                TimerActionProcess(times, timerAction, exceptionAction);
+                                                TimerProcessAction(times, timerProcessAction, onCaughtExceptionProcessFunc);
                                             }
                                         );
             if (autoStart)
@@ -41,37 +54,58 @@
                 Start();
             }
         }
-        private void TimerActionProcess(int times, Action timerAction, Action<Exception> exceptionAction)
+        private object _locker = new object();
+        private void TimerProcessAction
+                        (
+                            int times
+                            , Action timerAction
+                            , Func<EasyTimer, Exception, bool> onCaughtExceptionProcessFunc)
         {
-            if (_timer.Interval < _intervalSeconds)
-            {
-                _timer.Interval = _intervalSeconds;
-            }
             if (timerAction == null)
             {
                 return;
             }
-            _timer.Enabled = false;
-            _timer.Stop();
+            if (_timer != null)
+            {
+                lock (_locker)
+                {
+                    _timer.Stop();
+                    _timer.Enabled = false;
+                }
+            }
             DateTime begin;
             do
             {
                 begin = DateTime.Now;
-                try
-                {
-                    timerAction();
-                }
-                catch (Exception e)
-                {
-                    if (exceptionAction != null)
-                    {
-                        exceptionAction(e);
-                    }
-                }
-
+                TryCatchFinallyProcessHelper
+                    .TryProcessCatchFinally
+                        (
+                            true
+                            , () =>
+                            {
+                                timerAction();
+                            }
+                            , false
+                            , (x) =>
+                            {
+                                var reThrowException = false;
+                                if (onCaughtExceptionProcessFunc != null)
+                                {
+                                    reThrowException = onCaughtExceptionProcessFunc(this, x);
+                                }
+                                return reThrowException;
+                            }
+                            , null
+                        );
             } while (Math.Abs(DateTimeHelper.SecondsDiffNow(begin)) > times * _intervalSeconds);
-            _timer.Start();
-            _timer.Enabled = true;
+            if (_timer != null)
+            {
+                lock (_locker)
+                {
+                    _timer.Start();
+                    _timer.Enabled = true;
+                }
+            }
         }
     }
 }

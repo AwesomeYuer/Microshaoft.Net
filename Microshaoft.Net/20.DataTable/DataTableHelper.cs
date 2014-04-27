@@ -5,39 +5,40 @@
     using System.Data;
     using System.Data.SqlTypes;
     using System.Linq;
+    using System.Text;
+    using System.Reflection;
     public static class DataTableHelper
     {
-        private static List<Type> _typesWhiteList =
-                            new Func<List<Type>>
-                                    (
-                                        () =>
-                                        {
-                                            var r = new List<Type>()
-												{
-													typeof(int)
-													//, typeof(int?)
-													, typeof(long)
-													//, typeof(long?)
-													, typeof(string)
-													, typeof(DateTime)
-													//, typeof(DateTime?)
-												};
-                                            var sqlTypes = AssemblyHelper.GetAssembliesTypes
+        private static List<Type> _typesWhiteList = new Func<List<Type>>
                                                     (
-                                                        (x, y) =>
+                                                        () =>
                                                         {
-                                                            return
-                                                                (
-                                                                    x.Namespace == "System.Data.SqlTypes"
-                                                                    && x.IsValueType
-                                                                    && typeof(INullable).IsAssignableFrom(x)
-                                                                );
+                                                            var r = new List<Type>()
+														        {
+															        typeof(int)
+															        //, typeof(int?)
+															        , typeof(long)
+															        //, typeof(long?)
+															        , typeof(string)
+															        , typeof(DateTime)
+															        //, typeof(DateTime?)
+														        };
+                                                            var sqlTypes = AssemblyHelper.GetAssembliesTypes
+                                                                    (
+                                                                        (x, y) =>
+                                                                        {
+                                                                            return
+                                                                                (
+                                                                                    x.Namespace == "System.Data.SqlTypes"
+                                                                                    && x.IsValueType
+                                                                                    && typeof(INullable).IsAssignableFrom(x)
+                                                                                );
+                                                                        }
+                                                                    );
+                                                            r.AddRange(sqlTypes);
+                                                            return r;
                                                         }
-                                                    );
-                                            r.AddRange(sqlTypes);
-                                            return r;
-                                        }
-                                    )();
+                                                    )();
         public static DataTable GenerateEmptyDataTable<T>()
         {
             var type = typeof(T);
