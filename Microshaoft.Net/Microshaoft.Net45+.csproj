@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="11.XML\XslCompiledTransformHelper.cs" />
     <Compile Include="11.XML\XmlSerializersCache.cs" />
+    <Compile Include="12.Compress\GZipFileHelper.cs" />
     <Compile Include="12.Compress\ZipGZip.cs" />
     <Compile Include="12.ExtensionsMethods\ExtensionsMethodsManager.cs" />
     <Compile Include="12.FTP\FtpWebRequestResponseHelper.cs" />
