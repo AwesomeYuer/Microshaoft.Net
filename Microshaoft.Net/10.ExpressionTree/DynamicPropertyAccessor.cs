@@ -96,6 +96,17 @@
             var lambda = Expression.Lambda<Func<object, TProperty>>(getPropertyValue, target);
             return lambda.Compile();
         }
+        public static Func<TTarget, TProperty> CreateGetPropertyValueFunc<TTarget, TProperty>
+                (
+                    Type type
+                    , string propertyName
+                )
+        {
+            var target = Expression.Parameter(typeof(object), "p");
+            var getPropertyValue = Expression.Property(target, propertyName);
+            var lambda = Expression.Lambda<Func<TTarget, TProperty>>(getPropertyValue, target);
+            return lambda.Compile();
+        }
         public static Func<TProperty> CreateGetStaticPropertyValueFunc<TProperty>
                         (
                             string typeName
@@ -265,11 +276,98 @@
             }
             return CreateSetPropertyValueAction(type, propertyName);
         }
-        public static Action<object, TProperty> CreateSetPropertyValueAction<TProperty>
+        public static Action<TTarget, TProperty> CreateTargetSetPropertyValueAction<TTarget, TProperty>
                         (
                             Type type
                             , string propertyName
                         )
+        {
+            Action<TTarget, TProperty> action = null;
+            var property = type.GetProperty(propertyName);
+            if (property == null)
+            {
+                property =
+                            type
+                                .GetProperties()
+                                    .ToList()
+                                        .FirstOrDefault
+                                            (
+                                                (x) =>
+                                                {
+                                                    return
+                                                        (
+                                                            x.Name.ToLower()
+                                                            == propertyName.ToLower()
+                                                        );
+                                                }
+                                            );
+            }
+            if (property != null)
+            {
+                var target = Expression.Parameter(typeof(TTarget), "p");
+                var propertyValue = Expression.Parameter(typeof(TProperty), "p");
+                var getSetMethod = property.GetSetMethod();
+                if (getSetMethod == null)
+                {
+                    getSetMethod = property.GetSetMethod(true);
+                }
+                var call = Expression.Call(target, getSetMethod, propertyValue);
+                var lambda = Expression.Lambda<Action<TTarget, TProperty>>(call, target, propertyValue);
+                action = lambda.Compile();
+            }
+            return action;
+        }
+
+        public static Action<TTarget, object> CreateTargetSetPropertyValueAction<TTarget>
+                (
+                    Type type
+                    , string propertyName
+                )
+        {
+            Action<TTarget, object> action = null;
+            var property = type.GetProperty(propertyName);
+            if (property == null)
+            {
+                property =
+                            type
+                                .GetProperties()
+                                    .ToList()
+                                        .FirstOrDefault
+                                            (
+                                                (x) =>
+                                                {
+                                                    return
+                                                        (
+                                                            x.Name.ToLower()
+                                                            == propertyName.ToLower()
+                                                        );
+                                                }
+                                            );
+            }
+            if (property != null)
+            {
+
+                var target = Expression.Parameter(typeof(TTarget), "p");
+                var propertyValue = Expression.Parameter(typeof(object), "p");
+                var castPropertyValue = Expression.Convert(propertyValue, property.PropertyType);
+                var getSetMethod = property.GetSetMethod();
+                if (getSetMethod == null)
+                {
+                    getSetMethod = property.GetSetMethod(true);
+                }
+                var call = Expression.Call(target, getSetMethod, castPropertyValue);
+                var lambda = Expression.Lambda<Action<TTarget, object>>(call, target, propertyValue);
+                action = lambda.Compile();
+            }
+            return action;
+        }
+
+
+        public static Action<object, TProperty> CreateSetPropertyValueAction<TProperty>
+                (
+                    Type type
+                    , string propertyName
+                )
         {
             Action<object, TProperty> action = null;
             var property = type.GetProperty(propertyName);
@@ -296,18 +394,18 @@
                 var target = Expression.Parameter(typeof(object), "p");
                 var propertyValue = Expression.Parameter(typeof(TProperty), "p");
                 var castTarget = Expression.Convert(target, type);
-                var castPropertyValue = Expression.Convert(propertyValue, property.PropertyType);
                 var getSetMethod = property.GetSetMethod();
                 if (getSetMethod == null)
                 {
                     getSetMethod = property.GetSetMethod(true);
                 }
-                var call = Expression.Call(castTarget, getSetMethod, castPropertyValue);
+                var call = Expression.Call(castTarget, getSetMethod, propertyValue);
                 var lambda = Expression.Lambda<Action<object, TProperty>>(call, target, propertyValue);
                 action = lambda.Compile();
             }
             return action;
         }
+
         public static Action<object, TProperty> CreateSetPropertyValueAction<TProperty>
                         (
                             string typeName
@@ -416,7 +514,6 @@
             if (property != null)
             {
                 var propertyValue = Expression.Parameter(typeof(TProperty), "p");
-                //var castPropertyValue = Expression.Convert(propertyValue, property.PropertyType);
                 var getSetMethod = property.GetSetMethod();
                 if (getSetMethod == null)
                 {

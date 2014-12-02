@@ -2,26 +2,85 @@
 {
     using System;
     using System.Threading;
+    public static class ReaderWriterLockSlimExtensionsMethodsManager
+    {
+        public static bool TryEnterWriterLockSlimWrite<T>
+                                (
+                                    this ReaderWriterLockSlim writerLockSlim
+                                    , ref T target
+                                    , T newTarget
+                                    , int enterTimeOutInSeconds
+                                )
+                                    where T : class
+        {
+            return
+                ReaderWriterLockSlimHelper
+                    .TryEnterWriterLockSlimWrite<T>
+                        (
+                            writerLockSlim
+                            , ref target
+                            , newTarget
+                            , enterTimeOutInSeconds
+                        );
+        }
+
+
+        public static T TryEnterReadLockSlimRead<T>
+                        (
+                            this ReaderWriterLockSlim readerLockSlim
+                            , Func<ReaderWriterLockSlim, T> onReadedProcessFunc
+                            , int enterTimeOutInSeconds
+                        )
+        {
+            return
+                ReaderWriterLockSlimHelper
+                    .TryEnterReadLockSlimRead<T>
+                        (
+                            readerLockSlim
+                            , onReadedProcessFunc
+                            , enterTimeOutInSeconds
+                        );
+        }
+        public static bool TryEnterLockSlim
+                                (
+                                    this ReaderWriterLockSlim lockSlim
+                                    , Func<ReaderWriterLockSlim, bool> onEnterProcessFunc
+                                    , Action action
+                                    , Action<ReaderWriterLockSlim> onExitProcessAction
+                                )
+        {
+            return
+                ReaderWriterLockSlimHelper
+                    .TryEnterLockSlim
+                        (
+                            lockSlim
+                            , onEnterProcessFunc
+                            , action
+                            , onExitProcessAction
+                        );
+        }
+    }
     public static class ReaderWriterLockSlimHelper
     {
         public static bool TryEnterWriterLockSlimWrite<T>
-                                                 (
-                                                     ref T target
+                                                (
+                                                    ReaderWriterLockSlim writerLockSlim
+                                                    , ref T target
                                                     , T newTarget
-                                                    , int enterTimeOutSeconds
-                                                 )
+                                                    , int enterTimeOutInSeconds
+                                                )
                                                     where T : class
         {
             bool r = false;
-            var rwls = new ReaderWriterLockSlim();
+            //var rwls = new ReaderWriterLockSlim();
             int timeOut = Timeout.Infinite;
-            if (enterTimeOutSeconds >= 0)
+            if (enterTimeOutInSeconds >= 0)
             {
-                timeOut = enterTimeOutSeconds * 1000;
+                timeOut = enterTimeOutInSeconds * 1000;
             }
             try
             {
-                r = (rwls.TryEnterWriteLock(timeOut));
+                r = (writerLockSlim.TryEnterWriteLock(timeOut));
                 if (r)
                 {
                     Interlocked.Exchange<T>(ref target, newTarget);
@@ -32,29 +91,59 @@
             {
                 if (r)
                 {
-                    rwls.ExitWriteLock();
+                    writerLockSlim.ExitWriteLock();
                 }
             }
             return r;
         }
-        public static bool TryEnterWriterLockSlimWrite
+
+        public static T TryEnterReadLockSlimRead<T>
                                 (
-                                    Action action
-                                    , int enterTimeOutSeconds
+                                    ReaderWriterLockSlim readerLockSlim
+                                    , Func<ReaderWriterLockSlim, T> onReadedProcessFunc
+                                    , int enterTimeOutInSeconds
+                                )
+        {
+            T r = default(T);
+            var rr = false;
+            //var rwls = new ReaderWriterLockSlim();
+            int timeOut = Timeout.Infinite;
+            if (enterTimeOutInSeconds >= 0)
+            {
+                timeOut = enterTimeOutInSeconds * 1000;
+            }
+            try
+            {
+                rr = (readerLockSlim.TryEnterReadLock(timeOut));
+                if (rr)
+                {
+                    r = onReadedProcessFunc(readerLockSlim);
+                    rr = true;
+                }
+            }
+            finally
+            {
+                if (rr)
+                {
+                    readerLockSlim.ExitReadLock();
+                }
+            }
+            return r;
+        }
+        public static bool TryEnterLockSlim
+                                (
+                                    ReaderWriterLockSlim lockSlim
+                                    , Func<ReaderWriterLockSlim, bool> onEnterProcessFunc
+                                    , Action action
+                                    , Action<ReaderWriterLockSlim> onExitProcessAction
                                 )
         {
             bool r = false;
             if (action != null)
             {
-                var rwls = new ReaderWriterLockSlim();
-                int timeOut = Timeout.Infinite;
-                if (enterTimeOutSeconds >= 0)
-                {
-                    timeOut = enterTimeOutSeconds * 1000;
-                }
                 try
                 {
-                    r = (rwls.TryEnterWriteLock(timeOut));
+                    r = onEnterProcessFunc(lockSlim);
                     if (r)
                     {
                         action();
@@ -65,7 +154,7 @@
                 {
                     if (r)
                     {
-                        rwls.ExitWriteLock();
+                        onExitProcessAction(lockSlim);
                     }
                 }
             }

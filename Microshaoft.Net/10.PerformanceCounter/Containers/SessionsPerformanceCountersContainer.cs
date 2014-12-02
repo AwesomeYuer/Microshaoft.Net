@@ -2,11 +2,13 @@
 {
     using System;
     using System.Diagnostics;
+    using System.Threading;
     /// <summary>
     /// 关于Session数的性能计数器
     /// </summary>
     public class SessionsPerformanceCountersContainer : IPerformanceCountersContainer
     {
+        //private ReaderWriterLockSlim _readerWriterLockSlim = new ReaderWriterLockSlim();
         #region PerformanceCounters
         private PerformanceCounter _caughtExceptionsPerformanceCounter;
         [
@@ -20,13 +22,7 @@
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (
-                            ref _caughtExceptionsPerformanceCounter
-                            , value
-                            , 2
-                        );
+                _caughtExceptionsPerformanceCounter = value;
             }
             get
             {
@@ -45,7 +41,7 @@
         {
             private set
             {
-                ReaderWriterLockSlimHelper.TryEnterWriterLockSlimWrite<PerformanceCounter>(ref _processPerformanceCounter, value, 2);
+                _processPerformanceCounter = value;
             }
             get
             {
@@ -64,7 +60,7 @@
         {
             private set
             {
-                ReaderWriterLockSlimHelper.TryEnterWriterLockSlimWrite<PerformanceCounter>(ref _processingPerformanceCounter, value, 2);
+                _processingPerformanceCounter = value;
             }
             get
             {
@@ -83,7 +79,7 @@
         {
             private set
             {
-                ReaderWriterLockSlimHelper.TryEnterWriterLockSlimWrite<PerformanceCounter>(ref _processedPerformanceCounter, value, 2);
+                _processedPerformanceCounter = value;
             }
             get
             {
@@ -102,14 +98,14 @@
         {
             private set
             {
-                ReaderWriterLockSlimHelper.TryEnterWriterLockSlimWrite<PerformanceCounter>(ref _processedRateOfCountsPerSecondPerformanceCounter, value, 2);
+                _processedRateOfCountsPerSecondPerformanceCounter = value;
             }
             get
             {
                 return _processedRateOfCountsPerSecondPerformanceCounter;
             }
         }
-        private PerformanceCounter _ProcessedAverageTimerPerformanceCounter;
+        private PerformanceCounter _processedAverageTimerPerformanceCounter;
         [
             PerformanceCounterDefinitionAttribute
                 (
@@ -121,11 +117,11 @@
         {
             private set
             {
-                ReaderWriterLockSlimHelper.TryEnterWriterLockSlimWrite<PerformanceCounter>(ref _ProcessedAverageTimerPerformanceCounter, value, 2);
+                _processedAverageTimerPerformanceCounter = value;
             }
             get
             {
-                return _ProcessedAverageTimerPerformanceCounter;
+                return _processedAverageTimerPerformanceCounter;
             }
         }
         private PerformanceCounter _processedAverageBasePerformanceCounter;
@@ -134,7 +130,7 @@
         {
             private set
             {
-                ReaderWriterLockSlimHelper.TryEnterWriterLockSlimWrite<PerformanceCounter>(ref _processedAverageBasePerformanceCounter, value, 2);
+                _processedAverageBasePerformanceCounter = value;
             }
             get
             {

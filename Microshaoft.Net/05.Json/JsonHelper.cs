@@ -1,43 +1,59 @@
-﻿namespace Microshaoft
+﻿namespace Microsoft.Boc
 {
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
     using System;
     using System.IO;
+    using System.Linq;
     using System.Xml;
+    using System.Xml.Linq;
     public static class JsonHelper
     {
-        public static string XmlToJson(string xml, bool keyQuoteName = false)
+
+        public static string XmlToJson
+                                (
+                                    string xml
+                                    , Newtonsoft.Json.Formatting formatting = Newtonsoft.Json.Formatting.Indented
+                                    , bool keyQuoteName = false
+                                )
         {
-            var xmlDocument = new XmlDocument();
-            xmlDocument.LoadXml(xml);
+
+            XNode xElement;
+            xElement = XElement.Parse(xml).Elements().First();
             string json = string.Empty;
             using (var stringWriter = new StringWriter())
             {
                 using (var jsonTextWriter = new JsonTextWriter(stringWriter))
                 {
+                    jsonTextWriter.Formatting = formatting;
                     jsonTextWriter.QuoteName = keyQuoteName;
                     JsonSerializer jsonSerializer = new JsonSerializer();
-                    jsonSerializer.Serialize(jsonTextWriter, xmlDocument);
+                    jsonSerializer.Serialize(jsonTextWriter, xElement);
                     json = stringWriter.ToString();
                 }
             }
             return json;
         }
-        public static string JsonToXml(string json, string deserializeRootElementName = "root", bool includeRoot = true)
+        public static string JsonToXml
+                        (
+                            string json
+                            , bool needRoot = false
+                            , string defaultDeserializeRootElementName = "root"
+                        )
         {
-            var xmlDocument = JsonConvert.DeserializeXmlNode(json, deserializeRootElementName);
-            var xml = string.Empty;
-            XmlNode xmlNode = null;
-            if (!includeRoot)
+            if (needRoot)
             {
-                xmlNode = xmlDocument.SelectSingleNode(deserializeRootElementName);
+                json = string.Format
+                                (
+                                    @"{{ {1}{0}{2} }}"
+                                    , " : "
+                                    , defaultDeserializeRootElementName
+                                    , json
+                                );
             }
-            else
-            {
-                xmlNode = xmlDocument;
-            }
-            xml = xmlNode.InnerXml;
+            //XmlDocument xmlDocument = JsonConvert.DeserializeXmlNode(json, defaultDeserializeRootElementName);
+            XDocument xDocument = JsonConvert.DeserializeXNode(json, defaultDeserializeRootElementName);
+            var xml = xDocument.Elements().First().ToString();
             return xml;
         }
         public static T DeserializeByJTokenPath<T>

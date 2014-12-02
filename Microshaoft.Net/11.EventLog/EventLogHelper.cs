@@ -29,7 +29,7 @@
                                         );
                         }
                     );
-            EventLogHelper.TryCreateEventLogSource(log, source);
+            EventLogHelper.TryCreateEventSourceLog(log, source);
             EventLogHelper.WriteEventLogEntry
                             (
                                 source
@@ -50,15 +50,29 @@ namespace Microshaoft
     using System.Diagnostics;
     public static class EventLogHelper
     {
+        private static string _processNameID = new Func<string>
+                                                (
+                                                    () =>
+                                                    {
+                                                        var process = Process.GetCurrentProcess();
+                                                        return
+                                                            string.Format
+                                                                    (
+                                                                        "{1}{0}({2})"
+                                                                        , ""
+                                                                        , process.ProcessName
+                                                                        , process.Id
+                                                                    );
+                                                    }
+                                                )();
         public static EventLog[] GetEventLogs()
         {
             var r = EventLog.GetEventLogs();
             return r;
         }
-
         public static void WriteEventLogEntry
                                         (
-                                            //string logName,
+            //string logName,
                                             string sourceName,
                                             string logMessage,
                                             EventLogEntryType logEntryType
@@ -68,25 +82,39 @@ namespace Microshaoft
             EventLog eventLog = new EventLog();
             eventLog.Source = sourceName;
             //eventLog.Log = logName;
-            eventLog.WriteEntry(logMessage, logEntryType, eventID);
+            logMessage = string.Format
+                            (
+                                "{1}{0}Process [{3}] @ {4}{0}{5}{0}{2}"
+                                , "\r\n"
+                                , "begin ==========================================="
+                                , "end ============================================="
+                                , _processNameID
+                                , DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fffff")
+                                , logMessage
+                            );
+            eventLog.WriteEntry
+                (
+                    logMessage
+                    , logEntryType
+                    , eventID
+                );
         }
-        public static bool TryCreateEventLogSource
+        public static bool TryCreateEventSourceLog
                                         (
                                             string logName,
                                             string sourceName,
-                                            bool delete = false
+                                            bool allowRecreate = false
                                         )
         {
             bool r = false;
-
             if (EventLog.SourceExists(sourceName))
             {
-                if (delete)
+                if (allowRecreate)
                 {
                     try
                     {
                         var s = EventLog.LogNameFromSourceName(sourceName, ".");
-                        if (string.Compare(s, logName, true) == 0)
+                        if (string.Compare(s, logName, true) != 0)
                         {
                             EventLog.DeleteEventSource(sourceName);
                             EventLog.Delete(logName);
@@ -103,7 +131,7 @@ namespace Microshaoft
                 {
                     r = true;
                 }
-                
+
             }
             else
             {

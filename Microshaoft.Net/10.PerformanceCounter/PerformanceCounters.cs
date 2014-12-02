@@ -33,7 +33,7 @@
                                 onCountPerformanceInnerProcessAction();
                             }
                             , reThrowException
-                            , (x) =>
+                            , (x, y) =>
                             {
                                 var r = reThrowException;
                                 if (onCaughtExceptionProcessFunc != null)
@@ -67,7 +67,7 @@
             }
 
         }
-
+        
     }
 }
 namespace Microshaoft

@@ -1,17 +1,14 @@
 ﻿namespace Microshaoft
 {
     using System;
-
     using System.Collections.Concurrent;
     using System.Diagnostics;
     using System.Threading;
 
     internal static class QueuedObjectsPoolManager
     {
-        public static readonly QueuedObjectsPool<Stopwatch> StopwatchPool = new QueuedObjectsPool<Stopwatch>(0);
-
+        public static readonly QueuedObjectsPool<Stopwatch> StopwatchsPool = new QueuedObjectsPool<Stopwatch>(0);
     }
-
 
     public class ConcurrentAsyncQueue<T>
     {
@@ -92,21 +89,40 @@
                 QueuePerformanceCountersContainer qpcc = Sender.PerformanceCounters;
                 var queue = Sender.InternalQueue;
                 var reThrowException = false;
-                PerformanceCountersHelper
-                    .TryCountPerformance
-                        (
-                            counterEnabled
-                            , reThrowException
-                            , //IncrementCountersBeforeCountPerformance:
-                                new PerformanceCounter[]
+
+                PerformanceCounter[] incrementCountersBeforeCountPerformanceForThread = null;
+                PerformanceCounter[] decrementCountersAfterCountPerformanceForThread = null;
+                PerformanceCounter[] incrementCountersAfterCountPerformanceForThread = null;
+
+                if (counterEnabled && qpcc != null)
+                {
+                    incrementCountersBeforeCountPerformanceForThread =
+                        new PerformanceCounter[]
 									{
 										qpcc
 											.DequeueThreadStartPerformanceCounter
 										, qpcc
 											.DequeueThreadsCountPerformanceCounter
-									}
-                            , //DecrementCountersBeforeCountPerformance:
-                              null
+									};
+                    decrementCountersAfterCountPerformanceForThread =
+                        new PerformanceCounter[]
+									{
+										qpcc.DequeueThreadsCountPerformanceCounter
+									};
+                    incrementCountersAfterCountPerformanceForThread =
+                        new PerformanceCounter[]
+									{
+										qpcc.DequeueThreadEndPerformanceCounter	
+									};
+                }
+
+                PerformanceCountersHelper
+                    .TryCountPerformance
+                        (
+                            counterEnabled
+                            , reThrowException
+                            , incrementCountersBeforeCountPerformanceForThread
+                            , null
                             , null
                             , () =>
                             {
@@ -144,32 +160,40 @@
                                             break;
                                         }
                                         Tuple<Stopwatch, T> item = null;
-
                                         if (queue.TryDequeue(out item))
                                         {
-                                            var stopwatch = QueuedObjectsPoolManager.StopwatchPool.Get();
-                                            PerformanceCountersHelper
-                                                .TryCountPerformance
-                                                    (
-                                                        counterEnabled
-                                                        , reThrowException
-                                                        , new PerformanceCounter[]
-																{
-																	qpcc
-																		.DequeuePerformanceCounter
-																}
-                                                        , new PerformanceCounter[]
-																{
-																	qpcc
-																		.QueueLengthPerformanceCounter
-																}
-                                                        , new Tuple
-                                                                <
-                                                                    bool
-                                                                    , Stopwatch
-                                                                    , PerformanceCounter
-                                                                    , PerformanceCounter
-                                                                >[]
+                                            Stopwatch stopwatchDequeue = QueuedObjectsPoolManager.StopwatchsPool.Get();
+                                            PerformanceCounter[] incrementCountersBeforeCountPerformanceForDequeue = null;
+                                            PerformanceCounter[] decrementCountersBeforeCountPerformanceForDequeue = null;
+                                            PerformanceCounter[] incrementCountersAfterCountPerformanceForDequeue = null;
+                                            Tuple
+                                                <
+                                                    bool
+                                                    , Stopwatch
+                                                    , PerformanceCounter
+                                                    , PerformanceCounter
+                                                >[] timerCounters = null;
+                                            if (counterEnabled && qpcc != null)
+                                            {
+                                                incrementCountersBeforeCountPerformanceForDequeue =
+                                                    new PerformanceCounter[]
+																    {
+																	    qpcc
+																		    .DequeuePerformanceCounter
+																    };
+                                                decrementCountersBeforeCountPerformanceForDequeue =
+                                                    new PerformanceCounter[]
+																        {
+																	        qpcc
+																		        .QueueLengthPerformanceCounter
+																        };
+                                                timerCounters = new Tuple
+                                                                    <
+                                                                        bool
+                                                                        , Stopwatch
+                                                                        , PerformanceCounter
+                                                                        , PerformanceCounter
+                                                                    >[]
 																{
 
                                                                     Tuple.Create
@@ -197,13 +221,32 @@
 																			>
 																		(
 																			true
-																			, stopwatch
+																			, stopwatchDequeue
 																			, qpcc
 																				.DequeueProcessedAverageTimerPerformanceCounter
 																			, qpcc
 																				.DequeueProcessedAverageBasePerformanceCounter
 																		)
-																}
+																};
+
+                                                incrementCountersAfterCountPerformanceForDequeue =
+                                                    new PerformanceCounter[]
+																{
+																	qpcc
+																		.DequeueProcessedPerformanceCounter
+																	, qpcc
+																		.DequeueProcessedRateOfCountsPerSecondPerformanceCounter
+																};
+                                            }
+
+                                            PerformanceCountersHelper
+                                                .TryCountPerformance
+                                                    (
+                                                        counterEnabled
+                                                        , reThrowException
+                                                        , incrementCountersBeforeCountPerformanceForDequeue
+                                                        , decrementCountersBeforeCountPerformanceForDequeue
+                                                        , timerCounters
                                                         , () =>			//try
                                                         {
                                                             if (Sender.OnDequeue != null)
@@ -220,22 +263,18 @@
                                                         }
                                                         , null			//finally
                                                         , null
-                                                        , new PerformanceCounter[]
-																{
-																	qpcc
-																		.DequeueProcessedPerformanceCounter
-																	, qpcc
-																		.DequeueProcessedRateOfCountsPerSecondPerformanceCounter
-																}
+                                                        , incrementCountersAfterCountPerformanceForDequeue
                                                     );
                                             //池化
-                                            stopwatch.Reset();
-                                            QueuedObjectsPoolManager.StopwatchPool.Put(stopwatch);
+                                            stopwatchDequeue.Reset();
+                                            QueuedObjectsPoolManager.StopwatchsPool.Put(stopwatchDequeue);
                                         }
                                         #endregion while queue.IsEmpty loop
                                     }
                                     #region wait
-                                    Sender._dequeueThreadsProcessorsPool.Enqueue(this);
+                                    Sender
+                                        ._dequeueThreadsProcessorsPool
+                                        .Enqueue(this);
                                     if (Break)
                                     {
                                     }
@@ -288,16 +327,9 @@
                                 Break = false;
                                 #endregion
                             }
-                            , //DecrementCountersAfterCountPerformance:
-                                new PerformanceCounter[]
-									{
-										qpcc.DequeueThreadsCountPerformanceCounter
-									}
-                            , //IncrementCountersAfterCountPerformance:
-                                new PerformanceCounter[]
-									{
-										qpcc.DequeueThreadEndPerformanceCounter	
-									}
+                            , decrementCountersAfterCountPerformanceForThread
+                            , incrementCountersAfterCountPerformanceForThread
+
                         );
             }
         }
@@ -412,20 +444,29 @@
             var r = false;
             var reThrowException = false;
             var enableCount = _isAttachedPerformanceCounters;
+
+            PerformanceCounter[] incrementCountersBeforeCountPerformance = null;
+            var qpcc = PerformanceCounters;
+            if (enableCount && qpcc != null)
+            {
+                incrementCountersBeforeCountPerformance =
+                   new PerformanceCounter[]
+							{
+								qpcc
+									.EnqueuePerformanceCounter
+								, qpcc
+									.EnqueueRateOfCountsPerSecondPerformanceCounter
+								, qpcc
+									.QueueLengthPerformanceCounter
+							};
+            }
+
             PerformanceCountersHelper
                 .TryCountPerformance
                     (
                         enableCount
                         , reThrowException
-                        , new PerformanceCounter[]
-							{
-								PerformanceCounters
-									.EnqueuePerformanceCounter
-								, PerformanceCounters
-									.EnqueueRateOfCountsPerSecondPerformanceCounter
-								, PerformanceCounters
-									.QueueLengthPerformanceCounter
-							}
+                        , incrementCountersBeforeCountPerformance
                         , null
                         , null
                         , () =>
@@ -433,7 +474,7 @@
                             Stopwatch stopwatch = null;
                             if (_isAttachedPerformanceCounters)
                             {
-                                stopwatch = QueuedObjectsPoolManager.StopwatchPool.Get();
+                                stopwatch = QueuedObjectsPoolManager.StopwatchsPool.Get();
                                 stopwatch = Stopwatch.StartNew();
                             }
                             var element = Tuple.Create<Stopwatch, T>(stopwatch, item);
@@ -489,13 +530,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (
-                            ref _caughtExceptionsPerformanceCounter
-                            , value
-                            , 2
-                        );
+                _caughtExceptionsPerformanceCounter = value;
             }
             get
             {
@@ -514,9 +549,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _enqueuePerformanceCounter, value, 2);
+                _enqueuePerformanceCounter = value;
             }
             get
             {
@@ -535,9 +568,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _enqueueRateOfCountsPerSecondPerformanceCounter, value, 2);
+                _enqueueRateOfCountsPerSecondPerformanceCounter = value;
             }
             get
             {
@@ -556,9 +587,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _queueLengthPerformanceCounter, value, 2);
+                _queueLengthPerformanceCounter = value;
             }
             get
             {
@@ -577,9 +606,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _dequeuePerformanceCounter, value, 2);
+                _dequeuePerformanceCounter = value;
             }
             get
             {
@@ -598,9 +625,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _dequeueProcessedRateOfCountsPerSecondPerformanceCounter, value, 2);
+                _dequeueProcessedRateOfCountsPerSecondPerformanceCounter = value;
             }
             get
             {
@@ -619,9 +644,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _dequeueProcessedPerformanceCounter, value, 2);
+                _dequeueProcessedPerformanceCounter = value;
             }
             get
             {
@@ -640,9 +663,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _dequeueProcessedAverageTimerPerformanceCounter, value, 2);
+                _dequeueProcessedAverageTimerPerformanceCounter = value;
             }
             get
             {
@@ -660,9 +681,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _dequeueProcessedAverageBasePerformanceCounter, value, 2);
+                _dequeueProcessedAverageBasePerformanceCounter = value;
             }
             get
             {
@@ -681,9 +700,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _queuedWaitAverageTimerPerformanceCounter, value, 2);
+                _queuedWaitAverageTimerPerformanceCounter = value;
             }
             get
             {
@@ -701,9 +718,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _queuedWaitAverageBasePerformanceCounter, value, 2);
+                _queuedWaitAverageBasePerformanceCounter = value;
             }
             get
             {
@@ -722,9 +737,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _dequeueThreadStartPerformanceCounter, value, 2);
+                _dequeueThreadStartPerformanceCounter = value;
             }
             get
             {
@@ -743,9 +756,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _dequeueThreadsCountPerformanceCounter, value, 2);
+                _dequeueThreadsCountPerformanceCounter = value;
             }
             get
             {
@@ -764,9 +775,7 @@ namespace Microshaoft
         {
             private set
             {
-                ReaderWriterLockSlimHelper
-                    .TryEnterWriterLockSlimWrite<PerformanceCounter>
-                        (ref _dequeueThreadEndPerformanceCounter, value, 2);
+                _dequeueThreadEndPerformanceCounter = value;
             }
             get
             {

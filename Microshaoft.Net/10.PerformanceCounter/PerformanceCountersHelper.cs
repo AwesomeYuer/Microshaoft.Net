@@ -15,7 +15,6 @@
                                 , bool reThrowException = false
                                 , PerformanceCounter[] IncrementCountersBeforeCountPerformance = null
                                 , PerformanceCounter[] DecrementCountersBeforeCountPerformance = null
-
                                 , Tuple
                                         <
                                             bool						//before时是否已经启动
@@ -98,7 +97,7 @@
                                 onTryCountPerformanceProcessAction();
                             }
                             , reThrowException
-                            , (x) =>
+                            , (x, y) =>
                             {
                                 if (onCaughtExceptionCountPerformanceProcessFunc != null)
                                 {

@@ -46,7 +46,12 @@
                                         (
                                             (x, y) =>
                                             {
-                                                TimerProcessAction(times, timerProcessAction, onCaughtExceptionProcessFunc);
+                                                TimerProcessAction
+                                                    (
+                                                        times
+                                                        , timerProcessAction
+                                                        , onCaughtExceptionProcessFunc
+                                                    );
                                             }
                                         );
             if (autoStart)
@@ -59,7 +64,8 @@
                         (
                             int times
                             , Action timerAction
-                            , Func<EasyTimer, Exception, bool> onCaughtExceptionProcessFunc)
+                            , Func<EasyTimer, Exception, bool> onCaughtExceptionProcessFunc
+                        )
         {
             if (timerAction == null)
             {
@@ -86,7 +92,7 @@
                                 timerAction();
                             }
                             , false
-                            , (x) =>
+                            , (x, y) =>
                             {
                                 var reThrowException = false;
                                 if (onCaughtExceptionProcessFunc != null)

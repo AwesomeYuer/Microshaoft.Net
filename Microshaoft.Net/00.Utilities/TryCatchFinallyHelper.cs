@@ -4,11 +4,14 @@
     using System.Diagnostics;
     using System.Reflection;
 #if NET45
+    //#endif
     using System.Threading.Tasks;
+    //#if NET45
 #endif
     public static class TryCatchFinallyProcessHelper
     {
 #if NET45
+        //#endif
         public static async Task<T> TryProcessCatchFinallyAsync<T>
                                     (
                                         bool needTry
@@ -83,13 +86,14 @@
                 }
             }
         }
+        //#if NET45
 #endif
         public static void TryProcessCatchFinally
                                     (
                                         bool needTry
                                         , Action onTryProcessAction
                                         , bool reThrowException = false
-                                        , Func<Exception, bool> onCaughtExceptionProcessFunc = null
+                                        , Func<Exception, string, bool> onCaughtExceptionProcessFunc = null
                                         , Action<bool, Exception> onFinallyProcessAction = null
                                     )
         {
@@ -107,6 +111,16 @@
                     {
                         caughtException = true;
                         exception = e;
+#if NET45
+                        if (e is AggregateException)
+                        {
+                            var aggregateException = e as AggregateException;
+                            if (aggregateException != null)
+                            {
+                                exception = aggregateException.Flatten();
+                            }
+                        }
+#endif
                         var currentCalleeMethod = MethodInfo.GetCurrentMethod();
                         var currentCalleeType = currentCalleeMethod.DeclaringType;
                         StackTrace stackTrace = new StackTrace(e, true);
@@ -129,7 +143,7 @@
                         //Console.WriteLine(innerExceptionMessage);
                         if (onCaughtExceptionProcessFunc != null)
                         {
-                            reThrowException = onCaughtExceptionProcessFunc(e);
+                            reThrowException = onCaughtExceptionProcessFunc(e, innerExceptionMessage);
                         }
                         if (reThrowException)
                         {

@@ -1,32 +1,47 @@
-﻿
-namespace Microshaoft
+﻿namespace Microshaoft
 {
     using System;
     using System.IO;
     using System.Linq;
     public static class PathFileHelper
     {
-        public static void MoveFileTo
+        public static bool MoveFileTo
                             (
                                 string sourceFullPathFileName
-                                , string sourceRootPath
-                                , string destRootPath
+                                , string sourceDirectoryPath
+                                , string destDirectorytPath
+                                , bool deleteExistsDestFile = false
                             )
         {
-            var destFullPathFileName = GetNewPath(sourceRootPath, destRootPath, sourceFullPathFileName);
+            var r = false;
+            var destFullPathFileName = GetNewPath(sourceDirectoryPath, destDirectorytPath, sourceFullPathFileName);
             var directory = Path.GetDirectoryName(destFullPathFileName);
+            if (File.Exists(directory))
+            {
+                File.Delete(directory);
+            }
             if (!Directory.Exists(directory))
             {
                 Directory.CreateDirectory(directory);
             }
+            if (deleteExistsDestFile)
+            {
+                if (File.Exists(destFullPathFileName))
+                {
+                    File.Delete(destFullPathFileName);
+                }
+            }
             File.Move(sourceFullPathFileName, destFullPathFileName);
+            r = true;
+            return r;
         }
         public static string GetValidPathOrFileName(string path, string replacement)
         {
             string s = string.Empty;
             var chars = Path.GetInvalidPathChars();
             chars = chars.Union(Path.GetInvalidFileNameChars()).ToArray();
-            Array.ForEach
+            Array
+                .ForEach
                     (
                         chars
                         , (x) =>
@@ -36,39 +51,34 @@ namespace Microshaoft
                     );
             return s;
         }
-        public static string GetNewPath(string oldRootPath, string newRootPath, string path)
+        public static string GetNewPath(string oldDirectoryPath, string newDirectoryPath, string originalFileFullPath)
         {
-            path = Path.GetFullPath(path);
-            var directorySeparator = Path.DirectorySeparatorChar.ToString().ToLower();
-            oldRootPath = Path.GetFullPath(oldRootPath).ToLower();
-            newRootPath = Path.GetFullPath(newRootPath).ToLower();
-            if (!oldRootPath.EndsWith(directorySeparator))
+            string newPath = newDirectoryPath;
+            originalFileFullPath = Path.GetFullPath(originalFileFullPath);
+            var directorySeparator = Path.DirectorySeparatorChar.ToString();
+            oldDirectoryPath = Path.GetFullPath(oldDirectoryPath);
+            newDirectoryPath = Path.GetFullPath(newDirectoryPath);
+            if (!oldDirectoryPath.EndsWith(directorySeparator))
             {
-                oldRootPath += directorySeparator;
+                oldDirectoryPath += directorySeparator;
             }
-            if (!newRootPath.EndsWith(directorySeparator))
+            if (!newDirectoryPath.EndsWith(directorySeparator))
             {
-                newRootPath += directorySeparator;
+                newDirectoryPath += directorySeparator;
             }
-            path = path.ToLower();
-            int p = path.IndexOf(oldRootPath);
+            string relativeDirectoryPath = string.Empty;
+            int p = originalFileFullPath
+                        .ToLower()
+                        .IndexOf(oldDirectoryPath.ToLower());
             if (p >= 0)
             {
-                p += oldRootPath.Length;
+                p += oldDirectoryPath.Length;
+                relativeDirectoryPath = originalFileFullPath.Substring(p);
+                newPath = Path.Combine(newPath, relativeDirectoryPath);
             }
-            string relativePath = path.Substring(p);
-            ///			if (!relativePath.StartsWith(directorySeparator))
-            ///			{
-            ///				 relativePath = directorySeparator + relativePath;
-            ///			}
-            string newPath = string.Format
-                                            (
-                                                @"{1}{0}{2}"
-                                                , ""
-                                                , newRootPath
-                                                , relativePath
-                                            );
+            newPath = Path.GetFullPath(newPath);
             return newPath;
         }
     }
 }
+

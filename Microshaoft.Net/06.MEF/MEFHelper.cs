@@ -1,6 +1,6 @@
 ﻿
 #if NET45
-namespace Microsoft.Boc
+namespace Microshaoft
 {
 
     using System.ComponentModel.Composition;

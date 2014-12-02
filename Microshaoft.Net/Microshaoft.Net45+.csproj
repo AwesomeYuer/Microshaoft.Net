@@ -65,11 +65,13 @@
     </Compile>
     <Compile Include="00.Assembly\AssemblyHelper.cs" />
     <Compile Include="00.Utilities\BytesHelper.cs" />
+    <Compile Include="00.Utilities\KeyedPriorityQueue.cs" />
     <Compile Include="00.Utilities\StringHelper.cs" />
     <Compile Include="06.MEF\MEF.Contracts.cs" />
     <Compile Include="06.MEF\MEFHelper.cs" />
     <Compile Include="09.Socket\Microsoft.System.ServiceModel.Channels.SocketAsyncEventArgsPool.cs" />
     <Compile Include="09.Socket\Udp.cs" />
+    <Compile Include="10.CodeDom\SourceCodeDynamicCompilerInvokers.cs" />
     <Compile Include="10.Pools\00.PoolManager\PoolManager.cs" />
     <Compile Include="10.Pools\QueuedObjectsPool.cs" />
     <Compile Include="10.WindowsForm\TaskProcesserHelper.cs">
