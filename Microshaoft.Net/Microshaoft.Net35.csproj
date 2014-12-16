@@ -67,7 +67,6 @@
     <Compile Include="00.Utilities\GCNotifier.cs" />
     <Compile Include="00.Utilities\KeyedPriorityQueue.cs" />
     <Compile Include="00.Utilities\PathFileHelper.cs" />
-    <Compile Include="00.Utilities\ReaderWriterLockSlimHelper.cs" />
     <Compile Include="00.Utilities\RemotingHelper.cs" />
     <Compile Include="00.Utilities\SequenceSeedHelper.cs" />
     <Compile Include="00.Utilities\SerializerHelper.cs" />
@@ -99,6 +98,8 @@
     <Compile Include="10.PerformanceCounter\PerformanceCountersHelper.cs" />
     <Compile Include="10.Pools\00.PoolManager\PoolManager.cs" />
     <Compile Include="10.Pools\QueuedObjectsPool.cs" />
+    <Compile Include="10.ReaderWriterLock\EasyReaderWriterLockSlim.cs" />
+    <Compile Include="10.ReaderWriterLock\ReaderWriterLockSlimHelper.cs" />
     <Compile Include="10.WindowsForm\TaskProcesserHelper.cs">
       <SubType>Form</SubType>
     </Compile>

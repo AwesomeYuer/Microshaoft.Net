@@ -90,7 +90,6 @@
     <Compile Include="00.Utilities\FileLogHelper.cs" />
     <Compile Include="00.Utilities\GCNotifier.cs" />
     <Compile Include="00.Utilities\PathFileHelper.cs" />
-    <Compile Include="00.Utilities\ReaderWriterLockSlimHelper.cs" />
     <Compile Include="00.Utilities\RemotingHelper.cs" />
     <Compile Include="00.Utilities\SequenceSeedHelper.cs" />
     <Compile Include="00.Utilities\SerializerHelper.cs" />
