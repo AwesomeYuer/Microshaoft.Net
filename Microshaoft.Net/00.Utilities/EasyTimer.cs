@@ -20,11 +20,17 @@
             }
         }
         private int _intervalSeconds;
+        public void SetIntervalSeconds(int seconds)
+        {
+            _intervalSeconds = seconds;
+            _timer.Interval = seconds * 1000;
+        }
+
         public EasyTimer
                     (
                         int intervalSeconds
                         , int times         //action 耗时倍数
-                        , Action timerProcessAction = null
+                        , Action<EasyTimer> timerProcessAction = null
                         , bool autoStart = true
                         , bool skipFirstTimerProcessAction = true
                         , Func<EasyTimer, Exception, bool> onCaughtExceptionProcessFunc = null
@@ -63,7 +69,7 @@
         private void TimerProcessAction
                         (
                             int times
-                            , Action timerAction
+                            , Action<EasyTimer> timerAction
                             , Func<EasyTimer, Exception, bool> onCaughtExceptionProcessFunc
                         )
         {
@@ -89,7 +95,7 @@
                             true
                             , () =>
                             {
-                                timerAction();
+                                timerAction(this);
                             }
                             , false
                             , (x, y) =>
