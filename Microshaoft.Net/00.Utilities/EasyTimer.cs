@@ -20,6 +20,12 @@
             }
         }
         private int _intervalSeconds;
+
+        public int IntervalSeconds
+        {
+            get { return _intervalSeconds; }
+            //set { _intervalSeconds = value; }
+        }
         public void SetIntervalSeconds(int seconds)
         {
             _intervalSeconds = seconds;
@@ -42,12 +48,14 @@
                 return;
             }
             _intervalSeconds = intervalSeconds * 1000;
+            //2015-01-08 解决第一次 Null
+            _timer = new Timer(_intervalSeconds);
             //first 主线程
             if (!skipFirstTimerProcessAction)
             {
                 TimerProcessAction(times, timerProcessAction, onCaughtExceptionProcessFunc);
             }
-            _timer = new Timer(_intervalSeconds);
+
             _timer.Elapsed += new ElapsedEventHandler
                                         (
                                             (x, y) =>
