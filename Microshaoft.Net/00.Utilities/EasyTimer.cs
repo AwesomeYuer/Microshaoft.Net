@@ -47,9 +47,9 @@
             {
                 return;
             }
-            _intervalSeconds = intervalSeconds * 1000;
+            _intervalSeconds = intervalSeconds;
             //2015-01-08 解决第一次 Null
-            _timer = new Timer(_intervalSeconds);
+            _timer = new Timer(_intervalSeconds * 1000);
             //first 主线程
             if (!skipFirstTimerProcessAction)
             {
